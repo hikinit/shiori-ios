@@ -16,10 +16,14 @@ class CoreDataStackTests: XCTestCase {
   }
 
   func testManagedObjectModel() {
-    let mom = CoreDataStack.managedObjectModel
+    let mom = CoreDataStack.model
 
     XCTAssertFalse(mom.entities.isEmpty, "Entity should not be empty")
   }
 
+  func testPersistentContainer() {
+    let container = stack.persistentContainer
 
+    XCTAssertEqual(container.managedObjectModel, CoreDataStack.model)
+  }
 }

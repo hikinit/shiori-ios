@@ -65,8 +65,8 @@
 		2E339E1124EF68A6003EB34C /* ShioriUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */,
 				2E92B69824EE754F00187C4E /* CoreDataStackTests.swift */,
+				2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */,
 				2E339E1424EF68A6003EB34C /* Info.plist */,
 			);
 			path = ShioriUnitTests;

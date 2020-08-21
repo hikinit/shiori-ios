@@ -26,4 +26,21 @@ class CoreDataStackTests: XCTestCase {
 
     XCTAssertEqual(container.managedObjectModel, CoreDataStack.model)
   }
+
+  func testSaveContext() {
+    stack = TestCoreDataStack()
+    let context = stack.context
+    let series = Series(context: context)
+
+    series.setId()
+    series.title = "Isaac"
+    series.setKind(.webnovel)
+    series.setStatus(.hold)
+
+    XCTAssertEqual(context.hasChanges, true, "Changes should be true")
+
+    stack.saveContext(context)
+
+    XCTAssertEqual(context.hasChanges, false, "Changes should be false")
+  }
 }

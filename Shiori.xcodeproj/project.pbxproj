@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E339DFF24EE8636003EB34C /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */; };
+		2E339E1824EF68D3003EB34C /* CoreDataStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B69824EE754F00187C4E /* CoreDataStackTests.swift */; };
+		2E339E1924EF68D5003EB34C /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */; };
+		2E339E1A24EF693D003EB34C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B69F24EE75E000187C4E /* CoreDataStack.swift */; };
+		2E339E1B24EF6940003EB34C /* Shiori.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68B24EE74FE00187C4E /* Shiori.xcdatamodeld */; };
+		2E339E1C24EF6943003EB34C /* Series+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68F24EE752000187C4E /* Series+CoreDataProperties.swift */; };
+		2E339E1D24EF6945003EB34C /* Series+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68E24EE752000187C4E /* Series+CoreDataClass.swift */; };
 		2E92B67524EE745F00187C4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B67424EE745F00187C4E /* AppDelegate.swift */; };
 		2E92B67724EE745F00187C4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B67624EE745F00187C4E /* SceneDelegate.swift */; };
 		2E92B67924EE745F00187C4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B67824EE745F00187C4E /* ViewController.swift */; };
@@ -17,14 +22,13 @@
 		2E92B68D24EE74FE00187C4E /* Shiori.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68B24EE74FE00187C4E /* Shiori.xcdatamodeld */; };
 		2E92B69024EE752000187C4E /* Series+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68E24EE752000187C4E /* Series+CoreDataClass.swift */; };
 		2E92B69124EE752000187C4E /* Series+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68F24EE752000187C4E /* Series+CoreDataProperties.swift */; };
-		2E92B69924EE754F00187C4E /* CoreDataStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B69824EE754F00187C4E /* CoreDataStackTests.swift */; };
-		2E92B69E24EE75B000187C4E /* Shiori.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68B24EE74FE00187C4E /* Shiori.xcdatamodeld */; };
 		2E92B6A024EE75E000187C4E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B69F24EE75E000187C4E /* CoreDataStack.swift */; };
-		2E92B6A124EE760D00187C4E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B69F24EE75E000187C4E /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
+		2E339E1024EF68A6003EB34C /* ShioriUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShioriUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E339E1424EF68A6003EB34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E92B67124EE745F00187C4E /* Shiori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shiori.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E92B67424EE745F00187C4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E92B67624EE745F00187C4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,21 +40,19 @@
 		2E92B68C24EE74FE00187C4E /* Shiori.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shiori.xcdatamodel; sourceTree = "<group>"; };
 		2E92B68E24EE752000187C4E /* Series+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Series+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2E92B68F24EE752000187C4E /* Series+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Series+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2E92B69624EE754F00187C4E /* ShioriTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShioriTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E92B69824EE754F00187C4E /* CoreDataStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackTests.swift; sourceTree = "<group>"; };
-		2E92B69A24EE754F00187C4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E92B69F24EE75E000187C4E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2E92B66E24EE745F00187C4E /* Frameworks */ = {
+		2E339E0D24EF68A6003EB34C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2E92B69324EE754F00187C4E /* Frameworks */ = {
+		2E92B66E24EE745F00187C4E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,11 +62,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E339E1124EF68A6003EB34C /* ShioriUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */,
+				2E92B69824EE754F00187C4E /* CoreDataStackTests.swift */,
+				2E339E1424EF68A6003EB34C /* Info.plist */,
+			);
+			path = ShioriUnitTests;
+			sourceTree = "<group>";
+		};
 		2E92B66824EE745F00187C4E = {
 			isa = PBXGroup;
 			children = (
 				2E92B67324EE745F00187C4E /* Shiori */,
-				2E92B69724EE754F00187C4E /* ShioriTests */,
+				2E339E1124EF68A6003EB34C /* ShioriUnitTests */,
 				2E92B67224EE745F00187C4E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				2E92B67124EE745F00187C4E /* Shiori.app */,
-				2E92B69624EE754F00187C4E /* ShioriTests.xctest */,
+				2E339E1024EF68A6003EB34C /* ShioriUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,19 +124,26 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		2E92B69724EE754F00187C4E /* ShioriTests */ = {
-			isa = PBXGroup;
-			children = (
-				2E92B69824EE754F00187C4E /* CoreDataStackTests.swift */,
-				2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */,
-				2E92B69A24EE754F00187C4E /* Info.plist */,
-			);
-			path = ShioriTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2E339E0F24EF68A6003EB34C /* ShioriUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E339E1524EF68A6003EB34C /* Build configuration list for PBXNativeTarget "ShioriUnitTests" */;
+			buildPhases = (
+				2E339E0C24EF68A6003EB34C /* Sources */,
+				2E339E0D24EF68A6003EB34C /* Frameworks */,
+				2E339E0E24EF68A6003EB34C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShioriUnitTests;
+			productName = ShioriUnitTests;
+			productReference = 2E339E1024EF68A6003EB34C /* ShioriUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2E92B67024EE745F00187C4E /* Shiori */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E92B68524EE746000187C4E /* Build configuration list for PBXNativeTarget "Shiori" */;
@@ -142,23 +161,6 @@
 			productReference = 2E92B67124EE745F00187C4E /* Shiori.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2E92B69524EE754F00187C4E /* ShioriTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2E92B69B24EE754F00187C4E /* Build configuration list for PBXNativeTarget "ShioriTests" */;
-			buildPhases = (
-				2E92B69224EE754F00187C4E /* Sources */,
-				2E92B69324EE754F00187C4E /* Frameworks */,
-				2E92B69424EE754F00187C4E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ShioriTests;
-			productName = ShioriTests;
-			productReference = 2E92B69624EE754F00187C4E /* ShioriTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,10 +170,10 @@
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					2E92B67024EE745F00187C4E = {
+					2E339E0F24EF68A6003EB34C = {
 						CreatedOnToolsVersion = 12.0;
 					};
-					2E92B69524EE754F00187C4E = {
+					2E92B67024EE745F00187C4E = {
 						CreatedOnToolsVersion = 12.0;
 					};
 				};
@@ -190,12 +192,19 @@
 			projectRoot = "";
 			targets = (
 				2E92B67024EE745F00187C4E /* Shiori */,
-				2E92B69524EE754F00187C4E /* ShioriTests */,
+				2E339E0F24EF68A6003EB34C /* ShioriUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2E339E0E24EF68A6003EB34C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2E92B66F24EE745F00187C4E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -206,16 +215,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2E92B69424EE754F00187C4E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2E339E0C24EF68A6003EB34C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E339E1C24EF6943003EB34C /* Series+CoreDataProperties.swift in Sources */,
+				2E339E1824EF68D3003EB34C /* CoreDataStackTests.swift in Sources */,
+				2E339E1924EF68D5003EB34C /* TestCoreDataStack.swift in Sources */,
+				2E339E1D24EF6945003EB34C /* Series+CoreDataClass.swift in Sources */,
+				2E339E1B24EF6940003EB34C /* Shiori.xcdatamodeld in Sources */,
+				2E339E1A24EF693D003EB34C /* CoreDataStack.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2E92B66D24EE745F00187C4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,17 +242,6 @@
 				2E92B68D24EE74FE00187C4E /* Shiori.xcdatamodeld in Sources */,
 				2E92B67524EE745F00187C4E /* AppDelegate.swift in Sources */,
 				2E92B67724EE745F00187C4E /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2E92B69224EE754F00187C4E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2E92B6A124EE760D00187C4E /* CoreDataStack.swift in Sources */,
-				2E92B69924EE754F00187C4E /* CoreDataStackTests.swift in Sources */,
-				2E92B69E24EE75B000187C4E /* Shiori.xcdatamodeld in Sources */,
-				2E339DFF24EE8636003EB34C /* TestCoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +267,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2E339E1624EF68A6003EB34C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ShioriUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hikinit.ShioriUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2E339E1724EF68A6003EB34C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ShioriUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hikinit.ShioriUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		2E92B68324EE746000187C4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -415,43 +457,18 @@
 			};
 			name = Release;
 		};
-		2E92B69C24EE754F00187C4E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ShioriTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hikinit.ShioriTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		2E92B69D24EE754F00187C4E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ShioriTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hikinit.ShioriTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2E339E1524EF68A6003EB34C /* Build configuration list for PBXNativeTarget "ShioriUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E339E1624EF68A6003EB34C /* Debug */,
+				2E339E1724EF68A6003EB34C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2E92B66C24EE745F00187C4E /* Build configuration list for PBXProject "Shiori" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -466,15 +483,6 @@
 			buildConfigurations = (
 				2E92B68624EE746000187C4E /* Debug */,
 				2E92B68724EE746000187C4E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2E92B69B24EE754F00187C4E /* Build configuration list for PBXNativeTarget "ShioriTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2E92B69C24EE754F00187C4E /* Debug */,
-				2E92B69D24EE754F00187C4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -15,14 +15,17 @@ public class Series: NSManagedObject {
                    title: String,
                    kind: Series.Kind,
                    status: Series.Status,
-                   website: String) {
+                   website: String?) {
     self.init(context: context)
 
     self.id = UUID()
     self.title = title
     self.kind = kind.rawValue
     self.status = status.rawValue
-    self.website = URL(string: website)
+
+    if let website = website {
+      self.website = URL(string: website)
+    }
   }
 
   func setStatus(_ status: Status) {

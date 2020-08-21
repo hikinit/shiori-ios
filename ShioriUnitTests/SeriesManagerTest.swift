@@ -7,33 +7,33 @@
 
 import XCTest
 
-class LibraryTests: XCTestCase {
-  var library: Library!
+class SeriesManagerTest: XCTestCase {
+  var manager: SeriesManager!
   var coreDataStack: CoreDataStack!
 
   override func setUp() {
     coreDataStack = TestCoreDataStack()
-    library = Library(coreDataStack: coreDataStack)
+    manager = SeriesManager(coreDataStack: coreDataStack)
   }
 
   override func tearDown() {
     coreDataStack = nil
-    library = nil
+    manager = nil
   }
 
   func testGetAllSeries() {
-    var allSeries = library.getAllSeries()
+    var allSeries = manager.getAll()
     XCTAssertEqual(allSeries.count, 0)
 
 
-    let newSeries = library.addSeries(
+    let newSeries = manager.add(
       title: "Overgeared",
       kind: .webnovel,
       status: .onhold,
       website: "https://example.com"
     )
 
-    allSeries = library.getAllSeries()
+    allSeries = manager.getAll()
 
     XCTAssertEqual(allSeries.count, 1)
     XCTAssertEqual(allSeries.first, newSeries)
@@ -43,7 +43,7 @@ class LibraryTests: XCTestCase {
     let websiteUrlString = "https://example.com"
     let websiteUrl = URL(string: websiteUrlString)
 
-    let newSeries = library.addSeries(
+    let newSeries = manager.add(
       title: "Overgeared",
       kind: .webnovel,
       status: .onhold,
@@ -56,27 +56,27 @@ class LibraryTests: XCTestCase {
     XCTAssertNotNil(newSeries.id, "Id should not be nil")
     XCTAssertEqual(newSeries.website, websiteUrl)
 
-    let fetchedSeries = library.getAllSeries()
+    let fetchedSeries = manager.getAll()
     XCTAssertEqual(fetchedSeries.first, newSeries)
   }
 
   func testDeleteSeries() {
-    let newSeries = library.addSeries(
+    let newSeries = manager.add(
       title: "Overgeared",
       kind: .webnovel,
       status: .onhold,
       website: "https://example.com"
     )
-    var allSeries = library.getAllSeries()
+    var allSeries = manager.getAll()
     XCTAssertEqual(allSeries.count, 1)
 
-    library.deleteSeries(newSeries)
-    allSeries = library.getAllSeries()
+    manager.delete(newSeries)
+    allSeries = manager.getAll()
     XCTAssertEqual(allSeries.count, 0)
   }
 
   func testUpdateSeries() {
-    let newSeries = library.addSeries(
+    let newSeries = manager.add(
       title: "Overgeared",
       kind: .webnovel,
       status: .onhold,
@@ -87,7 +87,7 @@ class LibraryTests: XCTestCase {
     
     XCTAssertTrue(coreDataStack.context.hasChanges)
 
-    library.update(newSeries)
+    manager.update(newSeries)
 
     XCTAssertFalse(coreDataStack.context.hasChanges)
   }

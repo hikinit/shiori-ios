@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-class Library {
+class SeriesManager {
   var coreDataStack: CoreDataStack
   var context: NSManagedObjectContext
 
@@ -19,8 +19,8 @@ class Library {
 }
 
 // MARK: - Series
-extension Library {
-  func getAllSeries() -> [Series] {
+extension SeriesManager {
+  func getAll() -> [Series] {
     let request: NSFetchRequest<Series> = Series.fetchRequest()
 
     do {
@@ -31,7 +31,7 @@ extension Library {
   }
 
   @discardableResult
-  func addSeries(
+  func add(
     title: String,
     kind: Series.Kind,
     status: Series.Status,
@@ -48,7 +48,7 @@ extension Library {
     return series
   }
 
-  func deleteSeries(_ series: Series) {
+  func delete(_ series: Series) {
     context.delete(series)
     coreDataStack.saveContext(context)
   }

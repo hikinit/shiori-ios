@@ -35,7 +35,7 @@ class CoreDataStackTests: XCTestCase {
     series.setId()
     series.title = "Isaac"
     series.setKind(.webnovel)
-    series.setStatus(.hold)
+    series.setStatus(.onhold)
 
     XCTAssertEqual(context.hasChanges, true, "Changes should be true")
 

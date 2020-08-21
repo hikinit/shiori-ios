@@ -46,7 +46,7 @@ extension Series {
   enum Status: String {
     case reading,
          finished,
-         hold,
+         onhold,
          dropped
   }
 }

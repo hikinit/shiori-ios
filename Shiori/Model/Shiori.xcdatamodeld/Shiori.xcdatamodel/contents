@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17183" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Series" representedClassName="Series" syncable="YES">
+    <entity name="Bookmark" representedClassName="Bookmark" syncable="YES" codeGenerationType="category">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="kind" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="number" attributeType="Float" usesScalarValueType="YES"/>
+        <relationship name="series" optional="YES" maxCount="1" deletionRule="Nullify" ordered="YES" destinationEntity="Series" inverseName="bookmarks" inverseEntity="Series"/>
+    </entity>
+    <entity name="Series" representedClassName="Series" syncable="YES" codeGenerationType="category">
         <attribute name="cover" optional="YES" attributeType="URI"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="kind" attributeType="String"/>
         <attribute name="status" attributeType="String"/>
         <attribute name="title" attributeType="String"/>
         <attribute name="website" optional="YES" attributeType="URI"/>
+        <relationship name="bookmarks" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Bookmark" inverseName="series" inverseEntity="Bookmark"/>
     </entity>
     <elements>
-        <element name="Series" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="Series" positionX="203.9140625" positionY="32.06640625" width="128" height="148"/>
+        <element name="Bookmark" positionX="-63" positionY="27" width="128" height="118"/>
     </elements>
 </model>

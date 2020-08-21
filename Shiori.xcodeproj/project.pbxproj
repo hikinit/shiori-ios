@@ -11,11 +11,12 @@
 		2E339E1924EF68D5003EB34C /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */; };
 		2E339E1A24EF693D003EB34C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B69F24EE75E000187C4E /* CoreDataStack.swift */; };
 		2E339E1B24EF6940003EB34C /* Shiori.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68B24EE74FE00187C4E /* Shiori.xcdatamodeld */; };
-		2E339E1C24EF6943003EB34C /* Series+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68F24EE752000187C4E /* Series+CoreDataProperties.swift */; };
-		2E339E1D24EF6945003EB34C /* Series+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68E24EE752000187C4E /* Series+CoreDataClass.swift */; };
 		2E339E1F24EF7211003EB34C /* LibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339E1E24EF7211003EB34C /* LibraryTests.swift */; };
 		2E339E2224EF7245003EB34C /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339E2124EF7245003EB34C /* Library.swift */; };
 		2E339E2324EF7262003EB34C /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339E2124EF7245003EB34C /* Library.swift */; };
+		2E339E2624EFB182003EB34C /* Bookmark+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339E2424EFB182003EB34C /* Bookmark+CoreDataClass.swift */; };
+		2E339E2E24EFB481003EB34C /* Bookmark+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339E2424EFB182003EB34C /* Bookmark+CoreDataClass.swift */; };
+		2E339E2F24EFB484003EB34C /* Series+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68E24EE752000187C4E /* Series+CoreDataClass.swift */; };
 		2E92B67524EE745F00187C4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B67424EE745F00187C4E /* AppDelegate.swift */; };
 		2E92B67724EE745F00187C4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B67624EE745F00187C4E /* SceneDelegate.swift */; };
 		2E92B67924EE745F00187C4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B67824EE745F00187C4E /* ViewController.swift */; };
@@ -24,7 +25,6 @@
 		2E92B68124EE746000187C4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E92B67F24EE746000187C4E /* LaunchScreen.storyboard */; };
 		2E92B68D24EE74FE00187C4E /* Shiori.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68B24EE74FE00187C4E /* Shiori.xcdatamodeld */; };
 		2E92B69024EE752000187C4E /* Series+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68E24EE752000187C4E /* Series+CoreDataClass.swift */; };
-		2E92B69124EE752000187C4E /* Series+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68F24EE752000187C4E /* Series+CoreDataProperties.swift */; };
 		2E92B6A024EE75E000187C4E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B69F24EE75E000187C4E /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +34,7 @@
 		2E339E1424EF68A6003EB34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E339E1E24EF7211003EB34C /* LibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTests.swift; sourceTree = "<group>"; };
 		2E339E2124EF7245003EB34C /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		2E339E2424EFB182003EB34C /* Bookmark+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bookmark+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2E92B67124EE745F00187C4E /* Shiori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shiori.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E92B67424EE745F00187C4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E92B67624EE745F00187C4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		2E92B68224EE746000187C4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E92B68C24EE74FE00187C4E /* Shiori.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shiori.xcdatamodel; sourceTree = "<group>"; };
 		2E92B68E24EE752000187C4E /* Series+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Series+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2E92B68F24EE752000187C4E /* Series+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Series+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2E92B69824EE754F00187C4E /* CoreDataStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackTests.swift; sourceTree = "<group>"; };
 		2E92B69F24EE75E000187C4E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,13 +78,13 @@
 			path = ShioriUnitTests;
 			sourceTree = "<group>";
 		};
-		2E339E2024EF7232003EB34C /* Series */ = {
+		2E339E2D24EFB444003EB34C /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				2E339E2424EFB182003EB34C /* Bookmark+CoreDataClass.swift */,
 				2E92B68E24EE752000187C4E /* Series+CoreDataClass.swift */,
-				2E92B68F24EE752000187C4E /* Series+CoreDataProperties.swift */,
 			);
-			name = Series;
+			name = Class;
 			sourceTree = "<group>";
 		};
 		2E92B66824EE745F00187C4E = {
@@ -131,7 +131,7 @@
 		2E92B68A24EE74D600187C4E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2E339E2024EF7232003EB34C /* Series */,
+				2E339E2D24EFB444003EB34C /* Class */,
 				2E92B68B24EE74FE00187C4E /* Shiori.xcdatamodeld */,
 				2E92B69F24EE75E000187C4E /* CoreDataStack.swift */,
 				2E339E2124EF7245003EB34C /* Library.swift */,
@@ -237,13 +237,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E339E1C24EF6943003EB34C /* Series+CoreDataProperties.swift in Sources */,
 				2E339E1824EF68D3003EB34C /* CoreDataStackTests.swift in Sources */,
 				2E339E1924EF68D5003EB34C /* TestCoreDataStack.swift in Sources */,
 				2E339E1F24EF7211003EB34C /* LibraryTests.swift in Sources */,
-				2E339E1D24EF6945003EB34C /* Series+CoreDataClass.swift in Sources */,
 				2E339E2324EF7262003EB34C /* Library.swift in Sources */,
+				2E339E2F24EFB484003EB34C /* Series+CoreDataClass.swift in Sources */,
 				2E339E1B24EF6940003EB34C /* Shiori.xcdatamodeld in Sources */,
+				2E339E2E24EFB481003EB34C /* Bookmark+CoreDataClass.swift in Sources */,
 				2E339E1A24EF693D003EB34C /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,10 +253,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E92B6A024EE75E000187C4E /* CoreDataStack.swift in Sources */,
-				2E92B69124EE752000187C4E /* Series+CoreDataProperties.swift in Sources */,
 				2E92B69024EE752000187C4E /* Series+CoreDataClass.swift in Sources */,
 				2E92B67924EE745F00187C4E /* ViewController.swift in Sources */,
 				2E92B68D24EE74FE00187C4E /* Shiori.xcdatamodeld in Sources */,
+				2E339E2624EFB182003EB34C /* Bookmark+CoreDataClass.swift in Sources */,
 				2E339E2224EF7245003EB34C /* Library.swift in Sources */,
 				2E92B67524EE745F00187C4E /* AppDelegate.swift in Sources */,
 				2E92B67724EE745F00187C4E /* SceneDelegate.swift in Sources */,

@@ -14,8 +14,33 @@ class LibraryTests: XCTestCase {
   override func setUp() {
     super.setUp()
 
-    coreDataStack = CoreDataStack()
+    coreDataStack = TestCoreDataStack()
     library = Library(coreDataStack: coreDataStack)
+  }
+
+  override func tearDown() {
+    super.tearDown()
+
+    coreDataStack = nil
+    library = nil
+  }
+
+  func testGetAllSeries() {
+    var allSeries = library.getAllSeries()
+    XCTAssertEqual(allSeries.count, 0)
+
+
+    let newSeries = library.addSeries(
+      title: "Overgeared",
+      kind: .webnovel,
+      status: .onhold,
+      website: "https://example.com"
+    )
+
+    allSeries = library.getAllSeries()
+
+    XCTAssertEqual(allSeries.count, 1)
+    XCTAssertEqual(allSeries.first, newSeries)
   }
 
   func testAddSeries() {

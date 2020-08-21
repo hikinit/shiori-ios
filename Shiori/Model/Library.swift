@@ -16,6 +16,19 @@ class Library {
     self.coreDataStack = coreDataStack
     self.context = coreDataStack.context
   }
+}
+
+extension Library {
+  func getAllSeries() -> [Series] {
+    let request: NSFetchRequest<Series> = Series.fetchRequest()
+
+    do {
+      return try context.fetch(request)
+    } catch {
+      return []
+    }
+
+  }
 
   func addSeries(
     title: String,

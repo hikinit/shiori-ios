@@ -49,14 +49,3 @@ extension Series {
   }
 }
 
-extension Series {
-  static func stub(context: NSManagedObjectContext,
-                   title: String) -> Series {
-    return Series(context: context,
-                  title: title,
-                  kind: .webnovel,
-                  status: .onhold,
-                  website: "https://example.com")
-  }
-}
-

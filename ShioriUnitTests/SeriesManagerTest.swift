@@ -25,7 +25,11 @@ class SeriesManagerTest: XCTestCase {
   }
 
   func stubMaker(context: NSManagedObjectContext) ->  Series {
-    return Series.stub(context: context, title: "Overgeared")
+    return Series(context: context,
+                  title: "Overgeared",
+                  kind: .webnovel,
+                  status: .onhold,
+                  website: "https://example.com")
   }
 
   func testGetAllSeries() {

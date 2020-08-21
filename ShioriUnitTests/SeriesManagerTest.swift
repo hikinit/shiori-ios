@@ -8,12 +8,15 @@
 import XCTest
 
 class SeriesManagerTest: XCTestCase {
-  var manager: SeriesManager!
+  var manager: EntityManager<Series>!
   var coreDataStack: CoreDataStack!
 
   override func setUp() {
     coreDataStack = TestCoreDataStack()
-    manager = SeriesManager(coreDataStack: coreDataStack)
+    manager = EntityManager(
+      coreDataStack: coreDataStack,
+      context: coreDataStack.context
+    )
   }
 
   override func tearDown() {
@@ -21,17 +24,15 @@ class SeriesManagerTest: XCTestCase {
     manager = nil
   }
 
+  func stubMaker(context: NSManagedObjectContext) ->  Series {
+    return Series.stub(context: context, title: "Overgeared")
+  }
+
   func testGetAllSeries() {
     var allSeries = manager.getAll()
     XCTAssertEqual(allSeries.count, 0)
 
-
-    let newSeries = manager.add(
-      title: "Overgeared",
-      kind: .webnovel,
-      status: .onhold,
-      website: "https://example.com"
-    )
+    let newSeries = manager.add(stubMaker)
 
     allSeries = manager.getAll()
 
@@ -43,12 +44,7 @@ class SeriesManagerTest: XCTestCase {
     let websiteUrlString = "https://example.com"
     let websiteUrl = URL(string: websiteUrlString)
 
-    let newSeries = manager.add(
-      title: "Overgeared",
-      kind: .webnovel,
-      status: .onhold,
-      website: websiteUrlString
-    )
+    let newSeries = manager.add(stubMaker)
 
     XCTAssertEqual(newSeries.title, "Overgeared")
     XCTAssertEqual(newSeries.kind, "Web Novel")
@@ -61,12 +57,7 @@ class SeriesManagerTest: XCTestCase {
   }
 
   func testDeleteSeries() {
-    let newSeries = manager.add(
-      title: "Overgeared",
-      kind: .webnovel,
-      status: .onhold,
-      website: "https://example.com"
-    )
+    let newSeries = manager.add(stubMaker)
     var allSeries = manager.getAll()
     XCTAssertEqual(allSeries.count, 1)
 
@@ -76,15 +67,10 @@ class SeriesManagerTest: XCTestCase {
   }
 
   func testUpdateSeries() {
-    let newSeries = manager.add(
-      title: "Overgeared",
-      kind: .webnovel,
-      status: .onhold,
-      website: "https://example.com"
-    )
+    let newSeries = manager.add(stubMaker)
 
     newSeries.title = "Overgearedd"
-    
+
     XCTAssertTrue(coreDataStack.context.hasChanges)
 
     manager.update(newSeries)

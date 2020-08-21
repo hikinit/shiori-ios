@@ -11,16 +11,26 @@ import CoreData
 
 @objc(Series)
 public class Series: NSManagedObject {
+  convenience init(context: NSManagedObjectContext,
+                   title: String,
+                   kind: Series.Kind,
+                   status: Series.Status,
+                   website: String) {
+    self.init(context: context)
+
+    self.id = UUID()
+    self.title = title
+    self.kind = kind.rawValue
+    self.status = status.rawValue
+    self.website = URL(string: website)
+  }
+
   func setStatus(_ status: Status) {
     self.status = status.rawValue
   }
 
   func setKind(_ kind: Kind) {
     self.kind = kind.rawValue
-  }
-
-  func setId(_ id: UUID = UUID()) {
-    self.id = id
   }
 }
 
@@ -38,3 +48,15 @@ extension Series {
          dropped
   }
 }
+
+extension Series {
+  static func stub(context: NSManagedObjectContext,
+                   title: String) -> Series {
+    return Series(context: context,
+                  title: title,
+                  kind: .webnovel,
+                  status: .onhold,
+                  website: "https://example.com")
+  }
+}
+

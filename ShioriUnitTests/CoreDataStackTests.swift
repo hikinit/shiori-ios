@@ -32,7 +32,7 @@ class CoreDataStackTests: XCTestCase {
     let context = stack.context
     let series = Series(context: context)
 
-    series.setId()
+    series.id = UUID()
     series.title = "Isaac"
     series.setKind(.webnovel)
     series.setStatus(.onhold)

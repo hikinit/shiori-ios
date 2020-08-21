@@ -11,7 +11,7 @@
 		2E339E1924EF68D5003EB34C /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */; };
 		2E339E1A24EF693D003EB34C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B69F24EE75E000187C4E /* CoreDataStack.swift */; };
 		2E339E1B24EF6940003EB34C /* Shiori.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68B24EE74FE00187C4E /* Shiori.xcdatamodeld */; };
-		2E339E1F24EF7211003EB34C /* SeriesManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339E1E24EF7211003EB34C /* SeriesManagerTest.swift */; };
+		2E339E1F24EF7211003EB34C /* EntityManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339E1E24EF7211003EB34C /* EntityManagerTests.swift */; };
 		2E339E2224EF7245003EB34C /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339E2124EF7245003EB34C /* EntityManager.swift */; };
 		2E339E2624EFB182003EB34C /* Bookmark+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339E2424EFB182003EB34C /* Bookmark+CoreDataClass.swift */; };
 		2E339E2E24EFB481003EB34C /* Bookmark+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339E2424EFB182003EB34C /* Bookmark+CoreDataClass.swift */; };
@@ -32,7 +32,7 @@
 		2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
 		2E339E1024EF68A6003EB34C /* ShioriUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShioriUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E339E1424EF68A6003EB34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E339E1E24EF7211003EB34C /* SeriesManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesManagerTest.swift; sourceTree = "<group>"; };
+		2E339E1E24EF7211003EB34C /* EntityManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManagerTests.swift; sourceTree = "<group>"; };
 		2E339E2124EF7245003EB34C /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 		2E339E2424EFB182003EB34C /* Bookmark+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bookmark+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2E92B67124EE745F00187C4E /* Shiori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shiori.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				2E92B69824EE754F00187C4E /* CoreDataStackTests.swift */,
-				2E339E1E24EF7211003EB34C /* SeriesManagerTest.swift */,
+				2E339E1E24EF7211003EB34C /* EntityManagerTests.swift */,
 				2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */,
 				2E339E1424EF68A6003EB34C /* Info.plist */,
 			);
@@ -239,7 +239,7 @@
 			files = (
 				2E339E1824EF68D3003EB34C /* CoreDataStackTests.swift in Sources */,
 				2E339E1924EF68D5003EB34C /* TestCoreDataStack.swift in Sources */,
-				2E339E1F24EF7211003EB34C /* SeriesManagerTest.swift in Sources */,
+				2E339E1F24EF7211003EB34C /* EntityManagerTests.swift in Sources */,
 				2E339E2F24EFB484003EB34C /* Series+CoreDataClass.swift in Sources */,
 				2E339E1B24EF6940003EB34C /* Shiori.xcdatamodeld in Sources */,
 				2E339E2E24EFB481003EB34C /* Bookmark+CoreDataClass.swift in Sources */,

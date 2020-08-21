@@ -7,7 +7,7 @@
 
 import XCTest
 
-class SeriesManagerTest: XCTestCase {
+class EntityManagerTests: XCTestCase {
   var manager: EntityManager<Series>!
   var coreDataStack: CoreDataStack!
 
@@ -25,11 +25,13 @@ class SeriesManagerTest: XCTestCase {
   }
 
   func stubMaker(context: NSManagedObjectContext) ->  Series {
-    return Series(context: context,
-                  title: "Overgeared",
-                  kind: .webnovel,
-                  status: .onhold,
-                  website: "https://example.com")
+    return Series(
+      context: context,
+      title: "Overgeared",
+      kind: .webnovel,
+      status: .onhold,
+      website: "https://example.com"
+    )
   }
 
   func testGetAllSeries() {
@@ -80,5 +82,24 @@ class SeriesManagerTest: XCTestCase {
     manager.update(newSeries)
 
     XCTAssertFalse(coreDataStack.context.hasChanges)
+  }
+
+  func testAddSeriesWithChapter() {
+    let chapterManager = EntityManager<Bookmark>(
+      coreDataStack: coreDataStack,
+      context: coreDataStack.context
+    )
+
+    let newSeries = manager.add(stubMaker)
+
+    for i in 1...3 {
+      let chapter = chapterManager.add { Bookmark(context: $0, number: Float(i), kind: .chapter, name: nil) }
+      newSeries.addToBookmarks(chapter)
+    }
+
+    let bookmarks = newSeries.bookmarks?.array as? [Bookmark]
+
+    XCTAssertEqual(bookmarks?.count, 3)
+    XCTAssertEqual(bookmarks?.first?.number, 1)
   }
 }

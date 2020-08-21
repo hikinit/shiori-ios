@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17183" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Bookmark" representedClassName="Bookmark" syncable="YES" codeGenerationType="category">
-        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="kind" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="number" attributeType="Float" usesScalarValueType="YES"/>
+        <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="series" optional="YES" maxCount="1" deletionRule="Nullify" ordered="YES" destinationEntity="Series" inverseName="bookmarks" inverseEntity="Series"/>
     </entity>
     <entity name="Series" representedClassName="Series" syncable="YES" codeGenerationType="category">

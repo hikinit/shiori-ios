@@ -18,6 +18,7 @@ class Library {
   }
 }
 
+// MARK: - Series
 extension Library {
   func getAllSeries() -> [Series] {
     let request: NSFetchRequest<Series> = Series.fetchRequest()
@@ -27,9 +28,9 @@ extension Library {
     } catch {
       return []
     }
-
   }
 
+  @discardableResult
   func addSeries(
     title: String,
     kind: Series.Kind,
@@ -43,6 +44,18 @@ extension Library {
     series.setStatus(status)
     series.website = URL(string: website)
 
+    coreDataStack.saveContext(context)
     return series
+  }
+
+  func deleteSeries(_ series: Series) {
+    context.delete(series)
+    coreDataStack.saveContext(context)
+  }
+
+  func update(_ series: Series) {
+    if series.isUpdated {
+      coreDataStack.saveContext(context)
+    }
   }
 }

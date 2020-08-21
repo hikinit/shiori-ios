@@ -12,15 +12,11 @@ class LibraryTests: XCTestCase {
   var coreDataStack: CoreDataStack!
 
   override func setUp() {
-    super.setUp()
-
     coreDataStack = TestCoreDataStack()
     library = Library(coreDataStack: coreDataStack)
   }
 
   override func tearDown() {
-    super.tearDown()
-
     coreDataStack = nil
     library = nil
   }
@@ -47,17 +43,52 @@ class LibraryTests: XCTestCase {
     let websiteUrlString = "https://example.com"
     let websiteUrl = URL(string: websiteUrlString)
 
-    let series = library.addSeries(
+    let newSeries = library.addSeries(
       title: "Overgeared",
       kind: .webnovel,
       status: .onhold,
       website: websiteUrlString
     )
 
-    XCTAssertEqual(series.title, "Overgeared")
-    XCTAssertEqual(series.kind, "Web Novel")
-    XCTAssertEqual(series.status, "onhold")
-    XCTAssertNotNil(series.id, "Id should not be nil")
-    XCTAssertEqual(series.website, websiteUrl)
+    XCTAssertEqual(newSeries.title, "Overgeared")
+    XCTAssertEqual(newSeries.kind, "Web Novel")
+    XCTAssertEqual(newSeries.status, "onhold")
+    XCTAssertNotNil(newSeries.id, "Id should not be nil")
+    XCTAssertEqual(newSeries.website, websiteUrl)
+
+    let fetchedSeries = library.getAllSeries()
+    XCTAssertEqual(fetchedSeries.first, newSeries)
+  }
+
+  func testDeleteSeries() {
+    let newSeries = library.addSeries(
+      title: "Overgeared",
+      kind: .webnovel,
+      status: .onhold,
+      website: "https://example.com"
+    )
+    var allSeries = library.getAllSeries()
+    XCTAssertEqual(allSeries.count, 1)
+
+    library.deleteSeries(newSeries)
+    allSeries = library.getAllSeries()
+    XCTAssertEqual(allSeries.count, 0)
+  }
+
+  func testUpdateSeries() {
+    let newSeries = library.addSeries(
+      title: "Overgeared",
+      kind: .webnovel,
+      status: .onhold,
+      website: "https://example.com"
+    )
+
+    newSeries.title = "Overgearedd"
+    
+    XCTAssertTrue(coreDataStack.context.hasChanges)
+
+    library.update(newSeries)
+
+    XCTAssertFalse(coreDataStack.context.hasChanges)
   }
 }

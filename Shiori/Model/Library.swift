@@ -51,7 +51,7 @@ extension Library {
   }
 }
 
-// MARK: - Series
+// MARK: - Bookmark
 extension Library {
   func addBookmark(number: Float,
                    kind: Bookmark.Kind,

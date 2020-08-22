@@ -84,4 +84,29 @@ extension LibraryTests {
     XCTAssertEqual(series.arrayBookmarks.last, chapter2)
     XCTAssertNotEqual(series.arrayBookmarks.count, 0)
   }
+
+  func testUpdateBookmark() {
+    let series = addSeriesStub(title: "Overgeared")
+    let chapter1 = library.addBookmark(number: 1, kind: .chapter, name: nil, to: series)
+
+    XCTAssertEqual(series.arrayBookmarks.first?.number, 1)
+
+    chapter1.number = 1.5
+    library.updateBookmark(chapter1)
+
+    XCTAssertEqual(series.arrayBookmarks.first?.number, 1.5)
+  }
+
+  func testDeleteBookmark() {
+    let series = addSeriesStub(title: "Overgeared")
+    let chapter1 = library.addBookmark(number: 1, kind: .chapter, name: nil, to: series)
+    let chapter2 = library.addBookmark(number: 2, kind: .chapter, name: nil, to: series)
+
+    XCTAssertEqual(series.arrayBookmarks.count, 2)
+
+    library.deleteBookmark(chapter2)
+
+    XCTAssertEqual(series.arrayBookmarks.count, 1)
+    XCTAssertEqual(series.arrayBookmarks.first, chapter1)
+  }
 }

@@ -70,4 +70,12 @@ extension Library {
 
     return bookmark
   }
+
+  func updateBookmark(_ bookmark: Bookmark) {
+    bookmarkManager.update(bookmark)
+  }
+
+  func deleteBookmark(_ bookmark: Bookmark) {
+    bookmarkManager.delete(bookmark)
+  }
 }

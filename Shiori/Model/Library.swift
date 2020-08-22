@@ -19,6 +19,7 @@ class Library {
   }
 }
 
+// MARK: - Series
 extension Library {
   @discardableResult
   func addSeries(title: String,
@@ -47,5 +48,26 @@ extension Library {
 
   func updateSeries(_ series: Series) {
     seriesManager.update(series)
+  }
+}
+
+// MARK: - Series
+extension Library {
+  func addBookmark(number: Float,
+                   kind: Bookmark.Kind,
+                   name: String?,
+                   to series: Series) -> Bookmark {
+    let bookmark = bookmarkManager.add {
+      Bookmark(context: $0,
+               number: number,
+               kind: kind,
+               name: name
+      )
+    }
+
+    bookmark.series = series
+    bookmarkManager.update(bookmark)
+
+    return bookmark
   }
 }

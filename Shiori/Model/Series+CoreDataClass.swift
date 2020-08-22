@@ -28,6 +28,16 @@ public class Series: NSManagedObject {
     }
   }
 
+  var arrayBookmarks: [Bookmark] {
+    get {
+      guard let bookmarks = bookmarks?.array as? [Bookmark] else {
+        return []
+      }
+
+      return bookmarks
+    }
+  }
+
   func setStatus(_ status: Status) {
     self.status = status.rawValue
   }

@@ -109,4 +109,44 @@ extension LibraryTests {
     XCTAssertEqual(series.arrayBookmarks.count, 1)
     XCTAssertEqual(series.arrayBookmarks.first, chapter1)
   }
+
+  func testGetAllBookmark() {
+    let series1 = addSeriesStub(title: "Overgeared")
+    let series2 = addSeriesStub(title: "Isaac")
+    var allBookmarks = library.getAllBookmark()
+
+    XCTAssertEqual(allBookmarks.count, 0)
+
+    for series in [series1, series2] {
+      library.addBookmark(number: 1, kind: .chapter, name: nil, to: series)
+      library.addBookmark(number: 2, kind: .chapter, name: nil, to: series)
+    }
+
+    allBookmarks = library.getAllBookmark()
+    XCTAssertEqual(allBookmarks.count, 4)
+  }
+
+  func testGetBookmarkFromSeries() {
+    let series1 = addSeriesStub(title: "Overgeared")
+    let series2 = addSeriesStub(title: "Isaac")
+    var bookmarkSeries1 = library.getAllBookmarkFromSeries(series: series1)
+    var bookmarkSeries2 = library.getAllBookmarkFromSeries(series: series2)
+
+    XCTAssertEqual(bookmarkSeries1.count, 0)
+    XCTAssertEqual(bookmarkSeries2.count, 0)
+
+    for number in 1...5 {
+      library.addBookmark(number: Float(number), kind: .chapter, name: nil, to: series1)
+    }
+
+    for number in 1...10 {
+      library.addBookmark(number: Float(number), kind: .chapter, name: nil, to: series2)
+    }
+
+    bookmarkSeries1 = library.getAllBookmarkFromSeries(series: series1)
+    bookmarkSeries2 = library.getAllBookmarkFromSeries(series: series2)
+
+    XCTAssertEqual(bookmarkSeries1.count, 5)
+    XCTAssertEqual(bookmarkSeries2.count, 10)
+  }
 }

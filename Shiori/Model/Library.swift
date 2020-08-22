@@ -53,6 +53,7 @@ extension Library {
 
 // MARK: - Bookmark
 extension Library {
+  @discardableResult
   func addBookmark(number: Float,
                    kind: Bookmark.Kind,
                    name: String?,
@@ -77,5 +78,13 @@ extension Library {
 
   func deleteBookmark(_ bookmark: Bookmark) {
     bookmarkManager.delete(bookmark)
+  }
+
+  func getAllBookmarkFromSeries(series: Series) -> [Bookmark] {
+    return series.arrayBookmarks
+  }
+
+  func getAllBookmark() -> [Bookmark] {
+    return bookmarkManager.getAll()
   }
 }

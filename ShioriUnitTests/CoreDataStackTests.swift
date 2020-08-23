@@ -9,10 +9,10 @@ import XCTest
 import CoreData
 
 class CoreDataStackTests: XCTestCase {
-  var stack: CoreDataStack!
+  var sut: CoreDataStack!
 
   override func setUp() {
-    stack = CoreDataStack()
+    sut = CoreDataStack()
   }
 
   func testManagedObjectModel() {
@@ -22,14 +22,14 @@ class CoreDataStackTests: XCTestCase {
   }
 
   func testPersistentContainer() {
-    let container = stack.persistentContainer
+    let container = sut.persistentContainer
 
     XCTAssertEqual(container.managedObjectModel, CoreDataStack.model)
   }
 
   func testSaveContext() {
-    stack = TestCoreDataStack()
-    let context = stack.context
+    sut = TestCoreDataStack()
+    let context = sut.context
     let series = Series(context: context)
 
     series.id = UUID()
@@ -39,7 +39,7 @@ class CoreDataStackTests: XCTestCase {
 
     XCTAssertEqual(context.hasChanges, true, "Changes should be true")
 
-    stack.saveContext(context)
+    sut.saveContext(context)
 
     XCTAssertEqual(context.hasChanges, false, "Changes should be false")
   }

@@ -8,12 +8,12 @@
 import XCTest
 
 class EntityManagerTests: XCTestCase {
-  var manager: EntityManager<Series>!
+  var sut: EntityManager<Series>!
   var coreDataStack: CoreDataStack!
 
   override func setUp() {
     coreDataStack = TestCoreDataStack()
-    manager = EntityManager(
+    sut = EntityManager(
       coreDataStack: coreDataStack,
       context: coreDataStack.context
     )
@@ -21,7 +21,7 @@ class EntityManagerTests: XCTestCase {
 
   override func tearDown() {
     coreDataStack = nil
-    manager = nil
+    sut = nil
   }
 
   func stubMaker(context: NSManagedObjectContext) ->  Series {
@@ -35,12 +35,12 @@ class EntityManagerTests: XCTestCase {
   }
 
   func testGetAllSeries() {
-    var allSeries = manager.getAll()
+    var allSeries = sut.getAll()
     XCTAssertEqual(allSeries.count, 0)
 
-    let newSeries = manager.add(stubMaker)
+    let newSeries = sut.add(stubMaker)
 
-    allSeries = manager.getAll()
+    allSeries = sut.getAll()
 
     XCTAssertEqual(allSeries.count, 1)
     XCTAssertEqual(allSeries.first, newSeries)
@@ -50,7 +50,7 @@ class EntityManagerTests: XCTestCase {
     let websiteUrlString = "https://example.com"
     let websiteUrl = URL(string: websiteUrlString)
 
-    let newSeries = manager.add(stubMaker)
+    let newSeries = sut.add(stubMaker)
 
     XCTAssertEqual(newSeries.title, "Overgeared")
     XCTAssertEqual(newSeries.kind, "Web Novel")
@@ -58,28 +58,28 @@ class EntityManagerTests: XCTestCase {
     XCTAssertNotNil(newSeries.id, "Id should not be nil")
     XCTAssertEqual(newSeries.website, websiteUrl)
 
-    let fetchedSeries = manager.getAll()
+    let fetchedSeries = sut.getAll()
     XCTAssertEqual(fetchedSeries.first, newSeries)
   }
 
   func testDeleteSeries() {
-    let newSeries = manager.add(stubMaker)
-    var allSeries = manager.getAll()
+    let newSeries = sut.add(stubMaker)
+    var allSeries = sut.getAll()
     XCTAssertEqual(allSeries.count, 1)
 
-    manager.delete(newSeries)
-    allSeries = manager.getAll()
+    sut.delete(newSeries)
+    allSeries = sut.getAll()
     XCTAssertEqual(allSeries.count, 0)
   }
 
   func testUpdateSeries() {
-    let newSeries = manager.add(stubMaker)
+    let newSeries = sut.add(stubMaker)
 
     newSeries.title = "Overgearedd"
 
     XCTAssertTrue(coreDataStack.context.hasChanges)
 
-    manager.update(newSeries)
+    sut.update(newSeries)
 
     XCTAssertFalse(coreDataStack.context.hasChanges)
   }
@@ -90,7 +90,7 @@ class EntityManagerTests: XCTestCase {
       context: coreDataStack.context
     )
 
-    let newSeries = manager.add(stubMaker)
+    let newSeries = sut.add(stubMaker)
 
     for i in 1...3 {
       let chapter = chapterManager.add { Bookmark(context: $0, number: Float(i), kind: .chapter, name: nil) }

@@ -31,3 +31,9 @@ class SeriesListCellViewModel {
     self.websiteURL = website
   }
 }
+
+extension SeriesListCellViewModel: Equatable {
+  static func == (lhs: SeriesListCellViewModel, rhs: SeriesListCellViewModel) -> Bool {
+    return lhs.title == rhs.title && lhs.kind == rhs.kind
+  }
+}

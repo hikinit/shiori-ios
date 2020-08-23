@@ -7,4 +7,12 @@
 
 import Foundation
 
-class SeriesListViewModel {}
+class SeriesListViewModel {
+  private var library: Library
+
+  var viewDidLoad = {}
+
+  init(library: Library) {
+    self.library = library
+  }
+}

@@ -7,4 +7,19 @@
 
 import XCTest
 
-class SeriesListViewModelTests: XCTestCase {}
+class SeriesListViewModelTests: XCTestCase {
+  var sut: SeriesListViewModel!
+  var testLibrary: Library!
+
+  override func setUp() {
+    sut = SeriesListViewModel(library: TestLibrary())
+    testLibrary = TestLibrary()
+
+    sut.viewDidLoad()
+  }
+
+  override func tearDown() {
+    sut = nil
+    testLibrary = nil
+  }
+}

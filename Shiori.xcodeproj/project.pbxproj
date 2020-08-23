@@ -22,6 +22,10 @@
 		2E5070E224F154F600E2C840 /* SeriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5070E124F154F600E2C840 /* SeriesListViewModel.swift */; };
 		2E5070E324F1550100E2C840 /* SeriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5070E124F154F600E2C840 /* SeriesListViewModel.swift */; };
 		2E5070E524F1552200E2C840 /* SeriesListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5070E424F1552200E2C840 /* SeriesListViewModelTests.swift */; };
+		2E58B61F24F20D7500C168D2 /* TestLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58B61E24F20D7500C168D2 /* TestLibrary.swift */; };
+		2E58B62124F210C300C168D2 /* SeriesListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58B62024F210C300C168D2 /* SeriesListCellViewModel.swift */; };
+		2E58B62324F210D500C168D2 /* SeriesListCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58B62224F210D500C168D2 /* SeriesListCellViewModelTests.swift */; };
+		2E58B62424F210DC00C168D2 /* SeriesListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58B62024F210C300C168D2 /* SeriesListCellViewModel.swift */; };
 		2E92B67524EE745F00187C4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B67424EE745F00187C4E /* AppDelegate.swift */; };
 		2E92B67724EE745F00187C4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B67624EE745F00187C4E /* SceneDelegate.swift */; };
 		2E92B67924EE745F00187C4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B67824EE745F00187C4E /* ViewController.swift */; };
@@ -45,6 +49,9 @@
 		2E5070DA24F0847B00E2C840 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		2E5070E124F154F600E2C840 /* SeriesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListViewModel.swift; sourceTree = "<group>"; };
 		2E5070E424F1552200E2C840 /* SeriesListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListViewModelTests.swift; sourceTree = "<group>"; };
+		2E58B61E24F20D7500C168D2 /* TestLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLibrary.swift; sourceTree = "<group>"; };
+		2E58B62024F210C300C168D2 /* SeriesListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListCellViewModel.swift; sourceTree = "<group>"; };
+		2E58B62224F210D500C168D2 /* SeriesListCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListCellViewModelTests.swift; sourceTree = "<group>"; };
 		2E92B67124EE745F00187C4E /* Shiori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shiori.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E92B67424EE745F00187C4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E92B67624EE745F00187C4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				2E5070E124F154F600E2C840 /* SeriesListViewModel.swift */,
+				2E58B62024F210C300C168D2 /* SeriesListCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -124,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */,
+				2E58B61E24F20D7500C168D2 /* TestLibrary.swift */,
 				2E339E1424EF68A6003EB34C /* Info.plist */,
 			);
 			name = Support;
@@ -143,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				2E5070E424F1552200E2C840 /* SeriesListViewModelTests.swift */,
+				2E58B62224F210D500C168D2 /* SeriesListCellViewModelTests.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -299,10 +309,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E58B62424F210DC00C168D2 /* SeriesListCellViewModel.swift in Sources */,
 				2E339E1824EF68D3003EB34C /* CoreDataStackTests.swift in Sources */,
+				2E58B62324F210D500C168D2 /* SeriesListCellViewModelTests.swift in Sources */,
 				2E339E1924EF68D5003EB34C /* TestCoreDataStack.swift in Sources */,
 				2E339E1F24EF7211003EB34C /* EntityManagerTests.swift in Sources */,
 				2E5070E524F1552200E2C840 /* SeriesListViewModelTests.swift in Sources */,
+				2E58B61F24F20D7500C168D2 /* TestLibrary.swift in Sources */,
 				2E339E2F24EFB484003EB34C /* Series+CoreDataClass.swift in Sources */,
 				2E5070D924F0846E00E2C840 /* LibraryTests.swift in Sources */,
 				2E339E1B24EF6940003EB34C /* Shiori.xcdatamodeld in Sources */,
@@ -321,6 +334,7 @@
 				2E92B6A024EE75E000187C4E /* CoreDataStack.swift in Sources */,
 				2E92B69024EE752000187C4E /* Series+CoreDataClass.swift in Sources */,
 				2E92B67924EE745F00187C4E /* ViewController.swift in Sources */,
+				2E58B62124F210C300C168D2 /* SeriesListCellViewModel.swift in Sources */,
 				2E92B68D24EE74FE00187C4E /* Shiori.xcdatamodeld in Sources */,
 				2E339E2624EFB182003EB34C /* Bookmark+CoreDataClass.swift in Sources */,
 				2E339E2224EF7245003EB34C /* EntityManager.swift in Sources */,

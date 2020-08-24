@@ -7,13 +7,7 @@
 
 import UIKit
 
-class SeriesListDataSource: NSObject, UICollectionViewDataSource {
-  
-  private var viewModel: SeriesListViewModel
-
-  init(viewModel: SeriesListViewModel) {
-    self.viewModel = viewModel
-  }
+extension SeriesListViewController: UICollectionViewDataSource {
 
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return viewModel.numberOfRows

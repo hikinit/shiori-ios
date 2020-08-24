@@ -22,12 +22,11 @@ class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
 
   // MARK: - CollectionView
   private func setupCollectionView() {
-    dataSource = SeriesListDataSource(viewModel: viewModel)
-
     collectionView.register(
       UINib(nibName: String(describing: SeriesListViewCell.self), bundle: nil),
       forCellWithReuseIdentifier: viewModel.cellId)
-    collectionView.dataSource = dataSource
+    collectionView.dataSource = self
+    collectionView.delegate = self
   }
 
   private func setupViewModel() {
@@ -35,9 +34,7 @@ class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
     viewModel = SeriesListViewModel(library: library)
   }
 
-  // MARK: - Privates
-  private var viewModel: SeriesListViewModel!
-  private var dataSource: SeriesListDataSource!
+  var viewModel: SeriesListViewModel!
 }
 
 // MARK: - TabBarController configuration

@@ -10,6 +10,7 @@ import Foundation
 class SeriesListViewModel {
   private var library: Library
 
+  let cellId = "SeriesCell"
   var numberOfRows = 0
   var viewDidLoad = {}
 

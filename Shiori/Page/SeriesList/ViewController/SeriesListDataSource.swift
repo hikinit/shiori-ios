@@ -20,8 +20,15 @@ class SeriesListDataSource: NSObject, UICollectionViewDataSource {
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-    cell.backgroundColor = .red
+    guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: viewModel.cellId,
+            for: indexPath) as? SeriesListViewCell else {
+      fatalError("Can't load \(SeriesListViewCell.description())")
+    }
+
+    let cellViewModel = viewModel.cellViewModelsAtIndexPath(indexPath)
+    cell.configure(with: cellViewModel)
+
     return cell
   }
 

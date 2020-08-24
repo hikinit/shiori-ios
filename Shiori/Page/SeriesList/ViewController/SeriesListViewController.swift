@@ -22,8 +22,11 @@ class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
 
   // MARK: - CollectionView
   private func setupCollectionView() {
-    collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
     dataSource = SeriesListDataSource(viewModel: viewModel)
+
+    collectionView.register(
+      UINib(nibName: String(describing: SeriesListViewCell.self), bundle: nil),
+      forCellWithReuseIdentifier: viewModel.cellId)
     collectionView.dataSource = dataSource
   }
 

@@ -45,6 +45,9 @@
 		2E92B6A024EE75E000187C4E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B69F24EE75E000187C4E /* CoreDataStack.swift */; };
 		2EAB7A2624EFBC570044C6AD /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339E2124EF7245003EB34C /* EntityManager.swift */; };
 		2EF3F2C124F3EAB400E542AC /* UITextField+PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C024F3EAB400E542AC /* UITextField+PickerView.swift */; };
+		2EF3F2C424F46A9F00E542AC /* SeriesFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */; };
+		2EF3F2C524F46AA500E542AC /* SeriesFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */; };
+		2EF3F2C724F46AE900E542AC /* SeriesFormViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C624F46AE900E542AC /* SeriesFormViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +85,8 @@
 		2E92B69824EE754F00187C4E /* CoreDataStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackTests.swift; sourceTree = "<group>"; };
 		2E92B69F24EE75E000187C4E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		2EF3F2C024F3EAB400E542AC /* UITextField+PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+PickerView.swift"; sourceTree = "<group>"; };
+		2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesFormViewModel.swift; sourceTree = "<group>"; };
+		2EF3F2C624F46AE900E542AC /* SeriesFormViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesFormViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,7 @@
 		2E07F80F24F39F8900413389 /* SeriesForm */ = {
 			isa = PBXGroup;
 			children = (
+				2EF3F2C224F46A8900E542AC /* ViewModel */,
 				2E0ADD2824F3DECE007746BB /* ViewController */,
 				2E07F81024F39F9200413389 /* View */,
 			);
@@ -199,6 +205,7 @@
 			children = (
 				2E5070E424F1552200E2C840 /* SeriesListViewModelTests.swift */,
 				2E58B62224F210D500C168D2 /* SeriesListCellViewModelTests.swift */,
+				2EF3F2C624F46AE900E542AC /* SeriesFormViewModelTests.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -300,6 +307,14 @@
 				2E92703D24F35E250099CF86 /* Protocol */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		2EF3F2C224F46A8900E542AC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +432,8 @@
 				2E5070DC24F0847F00E2C840 /* Library.swift in Sources */,
 				2EAB7A2624EFBC570044C6AD /* EntityManager.swift in Sources */,
 				2E339E1A24EF693D003EB34C /* CoreDataStack.swift in Sources */,
+				2EF3F2C524F46AA500E542AC /* SeriesFormViewModel.swift in Sources */,
+				2EF3F2C724F46AE900E542AC /* SeriesFormViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +448,7 @@
 				2E92703624F354440099CF86 /* TabBarController.swift in Sources */,
 				2E92B68D24EE74FE00187C4E /* Shiori.xcdatamodeld in Sources */,
 				2E339E2624EFB182003EB34C /* Bookmark+CoreDataClass.swift in Sources */,
+				2EF3F2C424F46A9F00E542AC /* SeriesFormViewModel.swift in Sources */,
 				2E92703F24F35E300099CF86 /* ViewControllerWithStoryboard.swift in Sources */,
 				2E339E2224EF7245003EB34C /* EntityManager.swift in Sources */,
 				2E92B67524EE745F00187C4E /* AppDelegate.swift in Sources */,

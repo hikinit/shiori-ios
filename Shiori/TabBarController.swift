@@ -15,7 +15,7 @@ class TabBarController: UITabBarController {
   }
 
   private func setupViewControllers() {
-    let seriesVC = SeriesListViewController()
+    let seriesVC: SeriesListViewController = SeriesListViewController.loadFromStoryboard()
     seriesVC.title = SeriesListViewController.TabConfiguration.title
     seriesVC.tabBarItem = SeriesListViewController.TabConfiguration.item
 

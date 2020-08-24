@@ -7,8 +7,25 @@
 
 import UIKit
 
-class SeriesListViewController: UIViewController {
+class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
 
+  var viewModel: SeriesListViewModel!
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    setupViewModel()
+  }
+
+  private func setupViewModel() {
+    let library = Library(coreDataStack: CoreDataStack())
+    viewModel = .init(library: library)
+  }
+
+}
+
+// MARK: - TabBarController configuration
+extension SeriesListViewController {
   struct TabConfiguration {
     static let title = "Series"
     static let item = UITabBarItem(
@@ -17,9 +34,4 @@ class SeriesListViewController: UIViewController {
       selectedImage: UIImage(systemName: "book.fill")
     )
   }
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
-
 }

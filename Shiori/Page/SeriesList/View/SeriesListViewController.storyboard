@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Series List View Controller-->
+        <!--Series-->
         <scene sceneID="dUk-iZ-mYh">
             <objects>
                 <viewController storyboardIdentifier="SeriesListViewController" id="AwB-Wx-c8l" customClass="SeriesListViewController" customModule="Shiori" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HDw-Jo-c9u">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ik7-qb-571">
                                     <size key="itemSize" width="128" height="128"/>
@@ -37,13 +37,49 @@
                             <constraint firstItem="s8g-VI-imF" firstAttribute="trailing" secondItem="HDw-Jo-c9u" secondAttribute="trailing" id="rhl-5F-1fO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Series" id="p2n-tT-hCp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Fdv-7a-NHu">
+                            <connections>
+                                <segue destination="h2i-Vd-eav" kind="presentation" id="q1e-E1-XZa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="HDw-Jo-c9u" id="zjg-rq-edm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eou-l9-fvs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236" y="145"/>
+            <point key="canvasLocation" x="671.01449275362324" y="144.64285714285714"/>
+        </scene>
+        <!--SeriesFormViewControllerNavigation-->
+        <scene sceneID="g8J-px-hZK">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SeriesFormViewControllerReference" storyboardName="SeriesFormViewController" referencedIdentifier="SeriesFormViewControllerNavigation" id="h2i-Vd-eav" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wds-qD-7v2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1458" y="145"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MPd-mR-t0V">
+            <objects>
+                <navigationController storyboardIdentifier="SeriesFormViewControllerNavigation" automaticallyAdjustsScrollViewInsets="NO" id="43o-lz-kJh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="krM-hJ-DIp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U2o-sn-Iik">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="AwB-Wx-c8l" kind="relationship" relationship="rootViewController" id="yer-z8-nRR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wGw-hG-pX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-236.23188405797103" y="144.64285714285714"/>
         </scene>
     </scenes>
     <resources>

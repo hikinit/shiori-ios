@@ -48,13 +48,13 @@ public class Series: NSManagedObject {
 }
 
 extension Series {
-  enum Kind: String {
+  enum Kind: String, CaseIterable {
     case webnovel = "Web Novel"
     case lightnovel = "Light Novel"
     case comic = "Comic"
   }
 
-  enum Status: String {
+  enum Status: String, CaseIterable {
     case reading,
          finished,
          onhold,

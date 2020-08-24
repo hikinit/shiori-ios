@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E07F81224F39FA500413389 /* SeriesFormViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E07F81124F39FA500413389 /* SeriesFormViewController.storyboard */; };
+		2E0ADD2A24F3DF00007746BB /* SeriesFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ADD2924F3DF00007746BB /* SeriesFormViewController.swift */; };
 		2E19E0C924F37F33007BB654 /* SeriesListViewController+FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19E0C824F37F33007BB654 /* SeriesListViewController+FlowLayout.swift */; };
 		2E339E1824EF68D3003EB34C /* CoreDataStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B69824EE754F00187C4E /* CoreDataStackTests.swift */; };
 		2E339E1924EF68D5003EB34C /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E07F81124F39FA500413389 /* SeriesFormViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesFormViewController.storyboard; sourceTree = "<group>"; };
+		2E0ADD2924F3DF00007746BB /* SeriesFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesFormViewController.swift; sourceTree = "<group>"; };
 		2E19E0C824F37F33007BB654 /* SeriesListViewController+FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SeriesListViewController+FlowLayout.swift"; sourceTree = "<group>"; };
 		2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
 		2E339E1024EF68A6003EB34C /* ShioriUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShioriUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +100,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E07F80F24F39F8900413389 /* SeriesForm */ = {
+			isa = PBXGroup;
+			children = (
+				2E0ADD2824F3DECE007746BB /* ViewController */,
+				2E07F81024F39F9200413389 /* View */,
+			);
+			path = SeriesForm;
+			sourceTree = "<group>";
+		};
+		2E07F81024F39F9200413389 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E07F81124F39FA500413389 /* SeriesFormViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E0ADD2824F3DECE007746BB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2E0ADD2924F3DF00007746BB /* SeriesFormViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		2E339E1124EF68A6003EB34C /* ShioriUnitTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +147,7 @@
 		2E5070DE24F1547C00E2C840 /* Page */ = {
 			isa = PBXGroup;
 			children = (
+				2E07F80F24F39F8900413389 /* SeriesForm */,
 				2E5070DF24F1548C00E2C840 /* SeriesList */,
 			);
 			path = Page;
@@ -339,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E92703C24F35D080099CF86 /* SeriesListViewController.storyboard in Resources */,
+				2E07F81224F39FA500413389 /* SeriesFormViewController.storyboard in Resources */,
 				2E92704524F36C1E0099CF86 /* SeriesListViewCell.xib in Resources */,
 				2E92B68124EE746000187C4E /* LaunchScreen.storyboard in Resources */,
 				2E92B67E24EE746000187C4E /* Assets.xcassets in Resources */,
@@ -385,6 +416,7 @@
 				2E92B67524EE745F00187C4E /* AppDelegate.swift in Sources */,
 				2E92B67724EE745F00187C4E /* SceneDelegate.swift in Sources */,
 				2E5070DB24F0847B00E2C840 /* Library.swift in Sources */,
+				2E0ADD2A24F3DF00007746BB /* SeriesFormViewController.swift in Sources */,
 				2E19E0C924F37F33007BB654 /* SeriesListViewController+FlowLayout.swift in Sources */,
 				2E92704124F364F60099CF86 /* SeriesListViewController+DataSource.swift in Sources */,
 				2E5070E224F154F600E2C840 /* SeriesListViewModel.swift in Sources */,

@@ -30,6 +30,7 @@
 		2E92703924F3591E0099CF86 /* SeriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92703824F3591E0099CF86 /* SeriesListViewController.swift */; };
 		2E92703C24F35D080099CF86 /* SeriesListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E92703B24F35D080099CF86 /* SeriesListViewController.storyboard */; };
 		2E92703F24F35E300099CF86 /* ViewControllerWithStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92703E24F35E300099CF86 /* ViewControllerWithStoryboard.swift */; };
+		2E92704124F364F60099CF86 /* SeriesListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92704024F364F60099CF86 /* SeriesListDataSource.swift */; };
 		2E92B67524EE745F00187C4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B67424EE745F00187C4E /* AppDelegate.swift */; };
 		2E92B67724EE745F00187C4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B67624EE745F00187C4E /* SceneDelegate.swift */; };
 		2E92B67E24EE746000187C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E92B67D24EE746000187C4E /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		2E92703824F3591E0099CF86 /* SeriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListViewController.swift; sourceTree = "<group>"; };
 		2E92703B24F35D080099CF86 /* SeriesListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesListViewController.storyboard; sourceTree = "<group>"; };
 		2E92703E24F35E300099CF86 /* ViewControllerWithStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWithStoryboard.swift; sourceTree = "<group>"; };
+		2E92704024F364F60099CF86 /* SeriesListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListDataSource.swift; sourceTree = "<group>"; };
 		2E92B67124EE745F00187C4E /* Shiori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shiori.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E92B67424EE745F00187C4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E92B67624EE745F00187C4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				2E92703824F3591E0099CF86 /* SeriesListViewController.swift */,
+				2E92704024F364F60099CF86 /* SeriesListDataSource.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				2E92B67524EE745F00187C4E /* AppDelegate.swift in Sources */,
 				2E92B67724EE745F00187C4E /* SceneDelegate.swift in Sources */,
 				2E5070DB24F0847B00E2C840 /* Library.swift in Sources */,
+				2E92704124F364F60099CF86 /* SeriesListDataSource.swift in Sources */,
 				2E5070E224F154F600E2C840 /* SeriesListViewModel.swift in Sources */,
 				2E92703924F3591E0099CF86 /* SeriesListViewController.swift in Sources */,
 			);

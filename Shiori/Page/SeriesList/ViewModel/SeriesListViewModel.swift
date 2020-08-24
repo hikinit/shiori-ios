@@ -29,11 +29,11 @@ class SeriesListViewModel {
     }
   }
 
-  func getAllSeries() {
+  private func getAllSeries() {
     allSeries = library.getAllSeries()
   }
 
-  func configureDataSource() {
+  private func configureDataSource() {
     dataSource = allSeries.map { SeriesListCellViewModel(series: $0) }
     numberOfRows = dataSource.count
   }

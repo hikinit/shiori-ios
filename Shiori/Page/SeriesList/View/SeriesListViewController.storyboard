@@ -15,9 +15,31 @@
                     <view key="view" contentMode="scaleToFill" id="dST-jf-pKs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HDw-Jo-c9u">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ik7-qb-571">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="s8g-VI-imF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HDw-Jo-c9u" firstAttribute="top" secondItem="s8g-VI-imF" secondAttribute="top" id="7nI-U6-GJ5"/>
+                            <constraint firstItem="s8g-VI-imF" firstAttribute="bottom" secondItem="HDw-Jo-c9u" secondAttribute="bottom" id="OGc-pg-nDx"/>
+                            <constraint firstItem="HDw-Jo-c9u" firstAttribute="leading" secondItem="s8g-VI-imF" secondAttribute="leading" id="gGH-zv-arE"/>
+                            <constraint firstItem="s8g-VI-imF" firstAttribute="trailing" secondItem="HDw-Jo-c9u" secondAttribute="trailing" id="rhl-5F-1fO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="HDw-Jo-c9u" id="zjg-rq-edm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eou-l9-fvs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

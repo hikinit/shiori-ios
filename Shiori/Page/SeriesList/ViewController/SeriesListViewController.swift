@@ -8,20 +8,33 @@
 import UIKit
 
 class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
-
-  var viewModel: SeriesListViewModel!
+  // MARK: - View
+  @IBOutlet weak var collectionView: UICollectionView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
     setupViewModel()
+    setupCollectionView()
+
+    viewModel.viewDidLoad()
+  }
+
+  // MARK: - CollectionView
+  private func setupCollectionView() {
+    collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+    dataSource = SeriesListDataSource(viewModel: viewModel)
+    collectionView.dataSource = dataSource
   }
 
   private func setupViewModel() {
     let library = Library(coreDataStack: CoreDataStack())
-    viewModel = .init(library: library)
+    viewModel = SeriesListViewModel(library: library)
   }
 
+  // MARK: - Privates
+  private var viewModel: SeriesListViewModel!
+  private var dataSource: SeriesListDataSource!
 }
 
 // MARK: - TabBarController configuration

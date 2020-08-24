@@ -27,6 +27,10 @@ class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
       forCellWithReuseIdentifier: viewModel.cellId)
     collectionView.dataSource = self
     collectionView.delegate = self
+
+    if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+      layout.estimatedItemSize = .zero
+    }
   }
 
   private func setupViewModel() {

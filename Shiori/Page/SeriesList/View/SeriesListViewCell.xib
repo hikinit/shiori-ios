@@ -23,7 +23,7 @@
                                 <rect key="frame" x="8" y="8" width="184" height="284"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is it wrong for a series to have a long title?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nb7-tK-Pyv" userLabel="Title">
-                                        <rect key="frame" x="0.0" y="16" width="184" height="42.5"/>
+                                        <rect key="frame" x="8" y="16" width="168" height="42.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -39,8 +39,8 @@
                                 <constraints>
                                     <constraint firstItem="hRX-b5-8wJ" firstAttribute="centerX" secondItem="k7e-wN-YPn" secondAttribute="centerX" id="9Jm-ik-HhB"/>
                                     <constraint firstItem="nb7-tK-Pyv" firstAttribute="top" secondItem="k7e-wN-YPn" secondAttribute="top" constant="16" id="QBj-as-4Xj"/>
-                                    <constraint firstItem="nb7-tK-Pyv" firstAttribute="leading" secondItem="k7e-wN-YPn" secondAttribute="leading" id="a2e-wt-eLJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="nb7-tK-Pyv" secondAttribute="trailing" id="a63-f6-9sP"/>
+                                    <constraint firstItem="nb7-tK-Pyv" firstAttribute="leading" secondItem="k7e-wN-YPn" secondAttribute="leading" constant="8" id="a2e-wt-eLJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="nb7-tK-Pyv" secondAttribute="trailing" constant="8" id="a63-f6-9sP"/>
                                     <constraint firstAttribute="bottom" secondItem="hRX-b5-8wJ" secondAttribute="bottom" constant="16" id="hBz-MZ-6D4"/>
                                 </constraints>
                             </view>

@@ -10,7 +10,7 @@ import UIKit
 extension SeriesListViewController: UICollectionViewDelegateFlowLayout {
   struct Layout {
     static let margin: CGFloat = 16
-    static let lineSpacing: CGFloat = 8
+    static let lineSpacing: CGFloat = 16
     static let cellSpacing: CGFloat = 8
     static let column: CGFloat = 2
   }

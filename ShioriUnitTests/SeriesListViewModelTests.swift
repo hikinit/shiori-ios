@@ -9,22 +9,22 @@ import XCTest
 
 class SeriesListViewModelTests: XCTestCase {
   var sut: SeriesListViewModel!
-  var testLibrary: Library!
+  var library: Library!
 
   override func setUp() {
-    sut = SeriesListViewModel(library: TestLibrary())
-    testLibrary = TestLibrary()
+    library = TestLibrary()
+    sut = SeriesListViewModel(library: library)
 
     sut.viewDidLoad()
   }
 
   override func tearDown() {
     sut = nil
-    testLibrary = nil
+    library = nil
   }
 
   lazy var cellViewModels: [SeriesListCellViewModel] = {
-    testLibrary.getAllSeries().map {
+    library.getAllSeries().map {
       SeriesListCellViewModel(series: $0)
     }
   }()

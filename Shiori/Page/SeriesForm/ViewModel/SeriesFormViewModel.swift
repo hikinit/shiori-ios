@@ -38,7 +38,7 @@ class SeriesFormViewModel {
   var saveButtonIsEnabled = false
 
   var kindOptions = Series.Kind.allCases.map { $0.rawValue }
-  var statusOptions = Series.Status.allCases.map { $0.rawValue }
+  var statusOptions = Series.Status.allCases.map { $0.rawValue.capitalized }
 
   init(library: Library, series: Series?) {
     self.library = library
@@ -66,6 +66,7 @@ class SeriesFormViewModel {
   }
 
 
+  @discardableResult
   func saveSeries() -> Series? {
     if series == nil {
       return createNewSeries()
@@ -86,7 +87,7 @@ class SeriesFormViewModel {
 
   private func createNewSeries() -> Series? {
     guard let kind = Series.Kind(rawValue: self.kind),
-          let status = Series.Status(rawValue: self.status)
+          let status = Series.Status(rawValue: self.status.lowercased())
     else { return nil }
 
     return library.addSeries(

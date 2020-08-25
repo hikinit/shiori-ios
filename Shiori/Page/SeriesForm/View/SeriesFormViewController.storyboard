@@ -27,7 +27,7 @@
                                                 <textField opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Is it wrong for a series to have a long title?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Lj-MN-Auw" userLabel="Title Field">
                                                     <rect key="frame" x="20" y="11" width="374" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="name"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                                                     <connections>
                                                         <action selector="titleFieldDidEditingChange:" destination="lpf-mn-gkh" eventType="editingChanged" id="d17-hQ-dXL"/>
                                                     </connections>

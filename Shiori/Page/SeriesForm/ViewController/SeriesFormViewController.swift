@@ -23,7 +23,10 @@ class SeriesFormViewController: UITableViewController, ViewControllerWithStorybo
     dismiss(animated: true)
   }
 
-  @IBAction func saveDidTap(_ sender: UIBarButtonItem) {}
+  @IBAction func saveDidTap(_ sender: UIBarButtonItem) {
+    viewModel.saveSeries()
+    dismiss(animated: true)
+  }
 
   var series: Series!
   var viewModel: SeriesFormViewModel!

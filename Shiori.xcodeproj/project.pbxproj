@@ -43,6 +43,7 @@
 		2E92B68D24EE74FE00187C4E /* Shiori.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68B24EE74FE00187C4E /* Shiori.xcdatamodeld */; };
 		2E92B69024EE752000187C4E /* Series+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68E24EE752000187C4E /* Series+CoreDataClass.swift */; };
 		2E92B6A024EE75E000187C4E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B69F24EE75E000187C4E /* CoreDataStack.swift */; };
+		2E9CDE3824F4C6C2000D76BD /* PickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9CDE3724F4C6C2000D76BD /* PickerDataSource.swift */; };
 		2EAB7A2624EFBC570044C6AD /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339E2124EF7245003EB34C /* EntityManager.swift */; };
 		2EF3F2C124F3EAB400E542AC /* UITextField+PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C024F3EAB400E542AC /* UITextField+PickerView.swift */; };
 		2EF3F2C424F46A9F00E542AC /* SeriesFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */; };
@@ -84,6 +85,7 @@
 		2E92B68E24EE752000187C4E /* Series+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Series+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2E92B69824EE754F00187C4E /* CoreDataStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackTests.swift; sourceTree = "<group>"; };
 		2E92B69F24EE75E000187C4E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		2E9CDE3724F4C6C2000D76BD /* PickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerDataSource.swift; sourceTree = "<group>"; };
 		2EF3F2C024F3EAB400E542AC /* UITextField+PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+PickerView.swift"; sourceTree = "<group>"; };
 		2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesFormViewModel.swift; sourceTree = "<group>"; };
 		2EF3F2C624F46AE900E542AC /* SeriesFormViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesFormViewModelTests.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		2E339E1124EF68A6003EB34C /* ShioriUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				2E9CDE3324F4C546000D76BD /* Utility */,
 				2E5070E924F1559100E2C840 /* ViewModel */,
 				2E5070E824F1555700E2C840 /* Model */,
 				2E5070E724F1555200E2C840 /* Support */,
@@ -292,6 +295,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2E9CDE3324F4C546000D76BD /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
 		2EF3F2BE24F3EA1F00E542AC /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +315,7 @@
 			children = (
 				2EF3F2BE24F3EA1F00E542AC /* Extension */,
 				2E92703D24F35E250099CF86 /* Protocol */,
+				2E9CDE3724F4C6C2000D76BD /* PickerDataSource.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -453,6 +464,7 @@
 				2E339E2224EF7245003EB34C /* EntityManager.swift in Sources */,
 				2E92B67524EE745F00187C4E /* AppDelegate.swift in Sources */,
 				2E92B67724EE745F00187C4E /* SceneDelegate.swift in Sources */,
+				2E9CDE3824F4C6C2000D76BD /* PickerDataSource.swift in Sources */,
 				2E5070DB24F0847B00E2C840 /* Library.swift in Sources */,
 				2E0ADD2A24F3DF00007746BB /* SeriesFormViewController.swift in Sources */,
 				2E19E0C924F37F33007BB654 /* SeriesListViewController+FlowLayout.swift in Sources */,

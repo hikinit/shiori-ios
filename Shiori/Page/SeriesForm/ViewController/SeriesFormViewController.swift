@@ -54,8 +54,12 @@ class SeriesFormViewController: UITableViewController, ViewControllerWithStorybo
 
   private func createPickerView(textField: UITextField, item: [String]) {
     let didSelect = { textField.text = $0 }
-    let dataSource = viewModel.createPickerDataSource(item: item, didSelect: didSelect)
+    let dataSource = PickerDataSource(item: item, didSelect: didSelect)
+    
+    pickerDataSources.append(dataSource)
     textField.createPickerView(dataSource: dataSource)
   }
+
+  private var pickerDataSources = [PickerDataSource]()
 }
 

@@ -30,6 +30,10 @@ class SeriesListViewModel {
     }
   }
 
+  func reloadDataSource() {
+    getAllSeries()
+  }
+
   private func getAllSeries() {
     allSeries = library.getAllSeries()
   }

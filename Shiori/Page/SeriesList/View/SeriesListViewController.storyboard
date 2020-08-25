@@ -40,7 +40,7 @@
                     <navigationItem key="navigationItem" title="Series" id="p2n-tT-hCp">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Fdv-7a-NHu">
                             <connections>
-                                <segue destination="h2i-Vd-eav" kind="presentation" id="q1e-E1-XZa"/>
+                                <segue destination="h2i-Vd-eav" kind="presentation" identifier="SeriesFormViewController" modalPresentationStyle="fullScreen" id="q1e-E1-XZa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -55,7 +55,9 @@
         <!--SeriesFormViewControllerNavigation-->
         <scene sceneID="g8J-px-hZK">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SeriesFormViewControllerReference" storyboardName="SeriesFormViewController" referencedIdentifier="SeriesFormViewControllerNavigation" id="h2i-Vd-eav" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="SeriesFormViewControllerReference" storyboardName="SeriesFormViewController" referencedIdentifier="SeriesFormViewControllerNavigation" id="h2i-Vd-eav" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="AbD-ua-1YI"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wds-qD-7v2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1458" y="145"/>

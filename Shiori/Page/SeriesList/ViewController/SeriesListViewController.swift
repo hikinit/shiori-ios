@@ -20,6 +20,12 @@ class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
     viewModel.viewDidLoad()
   }
 
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+
+    viewModel.reloadDataSource()
+  }
+
   // MARK: - CollectionView
   private func setupCollectionView() {
     collectionView.register(

@@ -29,7 +29,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="name"/>
                                                     <connections>
-                                                        <action selector="textFieldDidEditingChange:" destination="lpf-mn-gkh" eventType="editingChanged" id="d17-hQ-dXL"/>
+                                                        <action selector="titleFieldDidEditingChange:" destination="lpf-mn-gkh" eventType="editingChanged" id="d17-hQ-dXL"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -56,9 +56,6 @@
                                                     <rect key="frame" x="20" y="11" width="374" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="name"/>
-                                                    <connections>
-                                                        <action selector="textFieldDidEditingChange:" destination="lpf-mn-gkh" eventType="editingChanged" id="nTg-yy-Hy0"/>
-                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -84,9 +81,6 @@
                                                     <rect key="frame" x="20" y="11" width="374" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="name"/>
-                                                    <connections>
-                                                        <action selector="textFieldDidEditingChange:" destination="lpf-mn-gkh" eventType="editingChanged" id="OSi-uJ-J9c"/>
-                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -112,9 +106,6 @@
                                                     <rect key="frame" x="20" y="11" width="374" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="URL" textContentType="url"/>
-                                                    <connections>
-                                                        <action selector="textFieldDidEditingChange:" destination="lpf-mn-gkh" eventType="editingChanged" id="xUN-rc-nwh"/>
-                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -143,6 +134,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="kindField" destination="A1r-aq-5DR" id="7GD-Uu-pHD"/>
+                        <outlet property="saveButton" destination="ado-8d-fV7" id="ykr-i8-xWa"/>
                         <outlet property="statusField" destination="wnX-LR-tOa" id="mWt-hF-tyQ"/>
                         <outlet property="titleField" destination="1Lj-MN-Auw" id="hSf-6I-NJy"/>
                         <outlet property="websiteField" destination="8hA-zY-qtJ" id="nWQ-eb-sQC"/>

@@ -14,31 +14,48 @@ class SeriesFormViewController: UITableViewController, ViewControllerWithStorybo
   @IBOutlet weak var statusField: UITextField!
   @IBOutlet weak var websiteField: UITextField!
 
+  @IBAction func cancelDidTap(_ sender: UIBarButtonItem) {
+    dismiss(animated: true)
+  }
+
+  @IBAction func saveDidTap(_ sender: UIBarButtonItem) {}
+
+  var series: Series!
+  var viewModel: SeriesFormViewModel! {
+    didSet {
+      setupUI()
+    }
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    setupView()
+    setupViewModel()
+    viewModel.viewDidLoad()
   }
 
-  private func setupView() {
-    kindPickerDataSource = pickerDataSourceFronEnum(enum: Series.Kind.allCases, textField: kindField)
-    kindField.createPickerView(dataSource: kindPickerDataSource)
-
-    statusPickerDataSource = pickerDataSourceFronEnum(enum: Series.Status.allCases, textField: statusField)
-    statusField.createPickerView(dataSource: statusPickerDataSource)
+  private func setupViewModel() {
+    let library = Library(coreDataStack: CoreDataStack())
+    viewModel = SeriesFormViewModel(
+      library: library,
+      series: series
+    )
   }
 
-  private func pickerDataSourceFronEnum<T>(
-    enum: [T],
-    textField: UITextField) -> PickerDataSource where T: CaseIterable & RawRepresentable, T.RawValue == String {
-    let item = T.allCases.map { $0.rawValue }
+  private func setupUI() {
+    titleField.text = viewModel.title
+    kindField.text = viewModel.kind
+    statusField.text = viewModel.status
+    websiteField.text = viewModel.website
+
+    createPickerView(textField: kindField, item: viewModel.kindOptions)
+    createPickerView(textField: statusField, item: viewModel.statusOptions)
+  }
+
+  private func createPickerView(textField: UITextField, item: [String]) {
     let didSelect = { textField.text = $0 }
-
-    return PickerDataSource(item: item, didSelect: didSelect)
+    let dataSource = viewModel.createPickerDataSource(item: item, didSelect: didSelect)
+    textField.createPickerView(dataSource: dataSource)
   }
-
-  // MARK: - Privates
-  private var kindPickerDataSource: PickerDataSource!
-  private var statusPickerDataSource: PickerDataSource!
 }
 

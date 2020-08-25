@@ -118,8 +118,16 @@
                         </sections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Series Form" largeTitleDisplayMode="never" id="tN2-E3-C9g">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Vcp-Fy-68M"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ado-8d-fV7"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Vcp-Fy-68M">
+                            <connections>
+                                <action selector="cancelDidTap:" destination="lpf-mn-gkh" id="fiE-M6-C3S"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ado-8d-fV7">
+                            <connections>
+                                <action selector="saveDidTap:" destination="lpf-mn-gkh" id="GO4-hL-2Rh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="kindField" destination="A1r-aq-5DR" id="7GD-Uu-pHD"/>

@@ -21,6 +21,10 @@ class SeriesFormViewModel {
   var website: String!
   var viewDidLoad = {}
 
+  var kindOptions = Series.Kind.allCases.map { $0.rawValue }
+  var statusOptions = Series.Status.allCases.map { $0.rawValue }
+  var pickerDataSources = [PickerDataSource]()
+
   init(library: Library, series: Series?) {
     self.library = library
     self.series = series
@@ -28,6 +32,20 @@ class SeriesFormViewModel {
     viewDidLoad = { [weak self] in
       self?.updateProperties()
     }
+  }
+
+  private func updateProperties() {
+    title = series?.title ?? ""
+    kind = series?.kind ?? ""
+    status = series?.status ?? ""
+    website = series?.website?.absoluteString ?? ""
+  }
+
+  func createPickerDataSource(item: [String], didSelect: @escaping (String) -> ()) -> PickerDataSource {
+    let dataSource = PickerDataSource(item: item, didSelect: didSelect)
+    pickerDataSources.append(dataSource)
+
+    return dataSource
   }
 
   func saveSeries() -> Series? {
@@ -59,12 +77,5 @@ class SeriesFormViewModel {
       status: status,
       website: website
     )
-  }
-
-  private func updateProperties() {
-    title = series?.title ?? ""
-    kind = series?.kind ?? ""
-    status = series?.status ?? ""
-    website = series?.website?.absoluteString ?? ""
   }
 }

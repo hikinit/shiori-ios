@@ -138,7 +138,6 @@
 		2E339E1124EF68A6003EB34C /* ShioriUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				2E9CDE3324F4C546000D76BD /* Utility */,
 				2E5070E924F1559100E2C840 /* ViewModel */,
 				2E5070E824F1555700E2C840 /* Model */,
 				2E5070E724F1555200E2C840 /* Support */,
@@ -293,13 +292,6 @@
 				2E5070DA24F0847B00E2C840 /* Library.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		2E9CDE3324F4C546000D76BD /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Utility;
 			sourceTree = "<group>";
 		};
 		2EF3F2BE24F3EA1F00E542AC /* Extension */ = {

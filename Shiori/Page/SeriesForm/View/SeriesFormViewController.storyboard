@@ -24,10 +24,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Is it wrong for a series to have a long title?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Lj-MN-Auw" userLabel="Title Field">
+                                                <textField opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Is it wrong for a series to have a long title?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Lj-MN-Auw" userLabel="Title Field">
                                                     <rect key="frame" x="20" y="11" width="374" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="name"/>
+                                                    <connections>
+                                                        <action selector="textFieldDidEditingChange:" destination="lpf-mn-gkh" eventType="editingChanged" id="d17-hQ-dXL"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -49,10 +52,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select series kind" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A1r-aq-5DR" userLabel="Kind Field">
+                                                <textField opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select series kind" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A1r-aq-5DR" userLabel="Kind Field">
                                                     <rect key="frame" x="20" y="11" width="374" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="name"/>
+                                                    <connections>
+                                                        <action selector="textFieldDidEditingChange:" destination="lpf-mn-gkh" eventType="editingChanged" id="nTg-yy-Hy0"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -74,10 +80,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Reading status" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnX-LR-tOa" userLabel="Status Field">
+                                                <textField opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Reading status" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnX-LR-tOa" userLabel="Status Field">
                                                     <rect key="frame" x="20" y="11" width="374" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="name"/>
+                                                    <connections>
+                                                        <action selector="textFieldDidEditingChange:" destination="lpf-mn-gkh" eventType="editingChanged" id="OSi-uJ-J9c"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -90,19 +99,22 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Website" id="kv3-qn-i6f">
+                            <tableViewSection headerTitle="Website" footerTitle="Optional" id="kv3-qn-i6f">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6gl-ar-0ex">
-                                        <rect key="frame" x="0.0" y="354" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="361.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6gl-ar-0ex" id="2im-hB-c1X">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Link related to the series" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8hA-zY-qtJ" userLabel="Website Field">
+                                                <textField opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Link related to the series" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8hA-zY-qtJ" userLabel="Website Field">
                                                     <rect key="frame" x="20" y="11" width="374" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="name"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="URL" textContentType="url"/>
+                                                    <connections>
+                                                        <action selector="textFieldDidEditingChange:" destination="lpf-mn-gkh" eventType="editingChanged" id="xUN-rc-nwh"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>

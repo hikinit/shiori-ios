@@ -104,4 +104,21 @@ class SeriesFormViewModelTests: XCTestCase {
     XCTAssertEqual(updatedSeries?.status, sut.status)
     XCTAssertEqual(updatedSeries?.website?.absoluteString, sut.website)
   }
+
+  func testSaveButtonIsEnabled() {
+    XCTAssertFalse(sut.saveButtonIsEnabled)
+
+    sut.title = "FFF"
+
+    XCTAssertFalse(sut.saveButtonIsEnabled)
+
+    sut.kind = Series.Kind.lightnovel.rawValue
+    sut.status = Series.Status.finished.rawValue
+
+    XCTAssertFalse(sut.saveButtonIsEnabled)
+
+    sut.title = "FFF-Class Trashero"
+    
+    XCTAssertTrue(sut.saveButtonIsEnabled)
+  }
 }

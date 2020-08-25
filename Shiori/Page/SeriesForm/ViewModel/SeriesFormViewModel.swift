@@ -15,11 +15,27 @@ class SeriesFormViewModel {
     }
   }
 
-  var title: String!
-  var kind: String!
-  var status: String!
+  var title: String! {
+    didSet {
+      verifyProperties()
+    }
+  }
+  
+  var kind: String! {
+    didSet {
+      verifyProperties()
+    }
+  }
+
+  var status: String! {
+    didSet {
+      verifyProperties()
+    }
+  }
+
   var website: String!
   var viewDidLoad = {}
+  var saveButtonIsEnabled = false
 
   var kindOptions = Series.Kind.allCases.map { $0.rawValue }
   var statusOptions = Series.Status.allCases.map { $0.rawValue }
@@ -38,6 +54,15 @@ class SeriesFormViewModel {
     kind = series?.kind ?? ""
     status = series?.status ?? ""
     website = series?.website?.absoluteString ?? ""
+  }
+
+  private func verifyProperties() {
+    guard let title = title, let status = status, let kind = kind else { return }
+    let enabled = title.count >= 5
+      && !status.isEmpty
+      && !kind.isEmpty
+
+    saveButtonIsEnabled = enabled
   }
 
 

@@ -47,6 +47,7 @@ class SeriesFormViewModelTests: XCTestCase {
     XCTAssertEqual(sut.kind, kind)
     XCTAssertEqual(sut.status, status)
     XCTAssertEqual(sut.website, "https://example.com")
+    XCTAssertEqual(sut.viewControllerTitle, "New Series")
   }
 
   func testPropertiesWhenSeriesNotNil() {
@@ -63,6 +64,7 @@ class SeriesFormViewModelTests: XCTestCase {
     XCTAssertEqual(sut.kind, series.kind)
     XCTAssertEqual(sut.status, series.status)
     XCTAssertEqual(sut.website, series.website?.absoluteString)
+    XCTAssertEqual(sut.viewControllerTitle, series.title)
   }
 
   func testSaveNewSeries() {

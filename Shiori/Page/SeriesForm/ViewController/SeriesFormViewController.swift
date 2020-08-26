@@ -48,6 +48,7 @@ class SeriesFormViewController: UITableViewController, ViewControllerWithStorybo
   }
 
   private func setupView() {
+    title = viewModel.viewControllerTitle
     titleField.text = viewModel.title
     kindField.text = viewModel.kind
     statusField.text = viewModel.status

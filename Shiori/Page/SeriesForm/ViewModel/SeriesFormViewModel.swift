@@ -15,6 +15,8 @@ class SeriesFormViewModel {
     }
   }
 
+  var viewControllerTitle = "New Series"
+
   var title: String! {
     didSet {
       verifyProperties()
@@ -50,6 +52,7 @@ class SeriesFormViewModel {
   }
 
   private func updateProperties() {
+    viewControllerTitle = series?.title ?? viewControllerTitle
     title = series?.title ?? ""
     kind = series?.kind ?? ""
     status = series?.status ?? ""

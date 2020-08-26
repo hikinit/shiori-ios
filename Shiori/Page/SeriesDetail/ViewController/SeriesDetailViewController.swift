@@ -19,7 +19,7 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
   }
 
   private func setupView() {
-    let headerViewSize = CGSize(width: tableView.bounds.width, height: 200)
+    let headerViewSize = CGSize(width: tableView.bounds.width, height: 220)
     let headerView = SeriesDetailHeaderView(frame: CGRect(origin: .zero, size: headerViewSize))
 
     tableView.tableHeaderView = headerView

@@ -30,8 +30,9 @@ class SeriesListViewModel {
     }
   }
 
-  func reloadDataSource() {
+  func reloadDataSource(completion: @escaping () -> ()) {
     getAllSeries()
+    completion()
   }
 
   private func getAllSeries() {

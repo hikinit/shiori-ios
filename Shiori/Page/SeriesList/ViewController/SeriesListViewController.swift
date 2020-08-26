@@ -24,7 +24,9 @@ class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
 
-    viewModel.reloadDataSource()
+    viewModel.reloadDataSource { [weak self] in
+      self?.collectionView.reloadData()
+    }
   }
 
   // MARK: - Long Press Gesture
@@ -67,7 +69,7 @@ class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
   }
 
   private func setupViewModel() {
-    let library = Library(coreDataStack: CoreDataStack())
+    let library = Library(coreDataStack: CoreDataStack.shared)
     viewModel = SeriesListViewModel(library: library)
   }
 

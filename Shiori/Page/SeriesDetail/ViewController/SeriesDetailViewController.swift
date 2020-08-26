@@ -19,7 +19,7 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
   }
 
   private func setupView() {
-    title = detailViewModel.title
+    navigationItem.largeTitleDisplayMode = .never
   }
 
   private func setupViewModel() {

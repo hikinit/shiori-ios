@@ -11,6 +11,7 @@
 		2E0ADD2A24F3DF00007746BB /* SeriesFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ADD2924F3DF00007746BB /* SeriesFormViewController.swift */; };
 		2E19E0C924F37F33007BB654 /* SeriesListFlowLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19E0C824F37F33007BB654 /* SeriesListFlowLayoutDelegate.swift */; };
 		2E243F6724F6199100A1605C /* SeriesListViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E243F6624F6199100A1605C /* SeriesListViewController+Delegate.swift */; };
+		2E243F6B24F61D5B00A1605C /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E243F6A24F61D5B00A1605C /* AlertBuilder.swift */; };
 		2E339E1824EF68D3003EB34C /* CoreDataStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B69824EE754F00187C4E /* CoreDataStackTests.swift */; };
 		2E339E1924EF68D5003EB34C /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */; };
 		2E339E1A24EF693D003EB34C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B69F24EE75E000187C4E /* CoreDataStack.swift */; };
@@ -58,6 +59,7 @@
 		2E0ADD2924F3DF00007746BB /* SeriesFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesFormViewController.swift; sourceTree = "<group>"; };
 		2E19E0C824F37F33007BB654 /* SeriesListFlowLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListFlowLayoutDelegate.swift; sourceTree = "<group>"; };
 		2E243F6624F6199100A1605C /* SeriesListViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SeriesListViewController+Delegate.swift"; sourceTree = "<group>"; };
+		2E243F6A24F61D5B00A1605C /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
 		2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
 		2E339E1024EF68A6003EB34C /* ShioriUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShioriUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E339E1424EF68A6003EB34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				2EF3F2BE24F3EA1F00E542AC /* Extension */,
 				2E92703D24F35E250099CF86 /* Protocol */,
 				2E9CDE3724F4C6C2000D76BD /* PickerDataSource.swift */,
+				2E243F6A24F61D5B00A1605C /* AlertBuilder.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				2E0ADD2A24F3DF00007746BB /* SeriesFormViewController.swift in Sources */,
 				2E19E0C924F37F33007BB654 /* SeriesListFlowLayoutDelegate.swift in Sources */,
 				2E92704124F364F60099CF86 /* SeriesListViewController+DataSource.swift in Sources */,
+				2E243F6B24F61D5B00A1605C /* AlertBuilder.swift in Sources */,
 				2E5070E224F154F600E2C840 /* SeriesListViewModel.swift in Sources */,
 				2E92703924F3591E0099CF86 /* SeriesListViewController.swift in Sources */,
 				2E92704324F36AC70099CF86 /* SeriesListViewCell.swift in Sources */,

@@ -9,6 +9,8 @@ import Foundation
 import CoreData
 
 class CoreDataStack {
+  static let shared = CoreDataStack()
+
   // MARK: - Static Properties
   static let name = "Shiori"
   static let model: NSManagedObjectModel = {

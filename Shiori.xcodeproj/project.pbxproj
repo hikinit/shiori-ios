@@ -48,6 +48,8 @@
 		2E9CDE3824F4C6C2000D76BD /* PickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9CDE3724F4C6C2000D76BD /* PickerDataSource.swift */; };
 		2E9CDE4D24F60EF8000D76BD /* SeriesListViewController+TabConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9CDE4C24F60EF8000D76BD /* SeriesListViewController+TabConfiguration.swift */; };
 		2EAB7A2624EFBC570044C6AD /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339E2124EF7245003EB34C /* EntityManager.swift */; };
+		2EC6433224F647FD0020D2E0 /* SeriesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6433124F647FD0020D2E0 /* SeriesDetailViewController.swift */; };
+		2EC6433524F6485B0020D2E0 /* SeriesDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EC6433424F6485B0020D2E0 /* SeriesDetailViewController.storyboard */; };
 		2EF3F2C124F3EAB400E542AC /* UITextField+PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C024F3EAB400E542AC /* UITextField+PickerView.swift */; };
 		2EF3F2C424F46A9F00E542AC /* SeriesFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */; };
 		2EF3F2C524F46AA500E542AC /* SeriesFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */; };
@@ -92,6 +94,8 @@
 		2E92B69F24EE75E000187C4E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		2E9CDE3724F4C6C2000D76BD /* PickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerDataSource.swift; sourceTree = "<group>"; };
 		2E9CDE4C24F60EF8000D76BD /* SeriesListViewController+TabConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SeriesListViewController+TabConfiguration.swift"; sourceTree = "<group>"; };
+		2EC6433124F647FD0020D2E0 /* SeriesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetailViewController.swift; sourceTree = "<group>"; };
+		2EC6433424F6485B0020D2E0 /* SeriesDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesDetailViewController.storyboard; sourceTree = "<group>"; };
 		2EF3F2C024F3EAB400E542AC /* UITextField+PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+PickerView.swift"; sourceTree = "<group>"; };
 		2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesFormViewModel.swift; sourceTree = "<group>"; };
 		2EF3F2C624F46AE900E542AC /* SeriesFormViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesFormViewModelTests.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 		2E5070DE24F1547C00E2C840 /* Page */ = {
 			isa = PBXGroup;
 			children = (
+				2EC6432F24F647790020D2E0 /* SeriesDetail */,
 				2E07F80F24F39F8900413389 /* SeriesForm */,
 				2E5070DF24F1548C00E2C840 /* SeriesList */,
 			);
@@ -302,6 +307,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2EC6432F24F647790020D2E0 /* SeriesDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2EC6433324F648470020D2E0 /* View */,
+				2EC6433024F647E70020D2E0 /* ViewController */,
+			);
+			path = SeriesDetail;
+			sourceTree = "<group>";
+		};
+		2EC6433024F647E70020D2E0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2EC6433124F647FD0020D2E0 /* SeriesDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2EC6433324F648470020D2E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EC6433424F6485B0020D2E0 /* SeriesDetailViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2EF3F2BE24F3EA1F00E542AC /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +447,7 @@
 				2E92703C24F35D080099CF86 /* SeriesListViewController.storyboard in Resources */,
 				2E07F81224F39FA500413389 /* SeriesFormViewController.storyboard in Resources */,
 				2E92704524F36C1E0099CF86 /* SeriesListViewCell.xib in Resources */,
+				2EC6433524F6485B0020D2E0 /* SeriesDetailViewController.storyboard in Resources */,
 				2E92B68124EE746000187C4E /* LaunchScreen.storyboard in Resources */,
 				2E92B67E24EE746000187C4E /* Assets.xcassets in Resources */,
 			);
@@ -461,6 +492,7 @@
 				2E92B68D24EE74FE00187C4E /* Shiori.xcdatamodeld in Sources */,
 				2E243F6724F6199100A1605C /* SeriesListViewController+Delegate.swift in Sources */,
 				2E339E2624EFB182003EB34C /* Bookmark+CoreDataClass.swift in Sources */,
+				2EC6433224F647FD0020D2E0 /* SeriesDetailViewController.swift in Sources */,
 				2EF3F2C424F46A9F00E542AC /* SeriesFormViewModel.swift in Sources */,
 				2E92703F24F35E300099CF86 /* ViewControllerWithStoryboard.swift in Sources */,
 				2E339E2224EF7245003EB34C /* EntityManager.swift in Sources */,

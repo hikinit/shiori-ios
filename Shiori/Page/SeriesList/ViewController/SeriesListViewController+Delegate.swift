@@ -9,6 +9,10 @@ import UIKit
 
 extension SeriesListViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    print("Selected:", indexPath)
+    let vc: SeriesDetailViewController = SeriesDetailViewController.loadFromStoryboard()
+    let cell = viewModel.cellViewModelsAtIndexPath(indexPath)
+    vc.series = cell.series
+
+    navigationController?.pushViewController(vc, animated: true)
   }
 }

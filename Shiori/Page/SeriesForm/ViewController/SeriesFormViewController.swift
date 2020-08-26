@@ -35,8 +35,8 @@ class SeriesFormViewController: UITableViewController, ViewControllerWithStorybo
     super.viewDidLoad()
 
     setupViewModel()
-    setupView()
     viewModel.viewDidLoad()
+    setupView()
   }
 
   private func setupViewModel() {

@@ -8,8 +8,7 @@
 import Foundation
 
 class SeriesListCellViewModel {
-  private var series: Series
-
+  var series: Series
   var title: String
   var kind: String
   var status: String

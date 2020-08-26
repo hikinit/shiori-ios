@@ -34,6 +34,10 @@ class AlertBuilder {
     return setAndReturn(\.title, to: title)
   }
 
+  func setMessage(_ message: String) -> Self {
+    return setAndReturn(\.message, to: message)
+  }
+
   func addDefaultAction(_ title: String, handler: ActionHandler = nil) -> Self {
     return addAction(title, style: .default, handler: handler)
   }

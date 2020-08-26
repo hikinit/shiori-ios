@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		2E07F81224F39FA500413389 /* SeriesFormViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E07F81124F39FA500413389 /* SeriesFormViewController.storyboard */; };
 		2E0ADD2A24F3DF00007746BB /* SeriesFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ADD2924F3DF00007746BB /* SeriesFormViewController.swift */; };
-		2E19E0C924F37F33007BB654 /* SeriesListViewController+FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19E0C824F37F33007BB654 /* SeriesListViewController+FlowLayout.swift */; };
+		2E19E0C924F37F33007BB654 /* SeriesListFlowLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19E0C824F37F33007BB654 /* SeriesListFlowLayoutDelegate.swift */; };
+		2E243F6724F6199100A1605C /* SeriesListViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E243F6624F6199100A1605C /* SeriesListViewController+Delegate.swift */; };
 		2E339E1824EF68D3003EB34C /* CoreDataStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B69824EE754F00187C4E /* CoreDataStackTests.swift */; };
 		2E339E1924EF68D5003EB34C /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */; };
 		2E339E1A24EF693D003EB34C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B69F24EE75E000187C4E /* CoreDataStack.swift */; };
@@ -44,6 +45,7 @@
 		2E92B69024EE752000187C4E /* Series+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68E24EE752000187C4E /* Series+CoreDataClass.swift */; };
 		2E92B6A024EE75E000187C4E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B69F24EE75E000187C4E /* CoreDataStack.swift */; };
 		2E9CDE3824F4C6C2000D76BD /* PickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9CDE3724F4C6C2000D76BD /* PickerDataSource.swift */; };
+		2E9CDE4D24F60EF8000D76BD /* SeriesListViewController+TabConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9CDE4C24F60EF8000D76BD /* SeriesListViewController+TabConfiguration.swift */; };
 		2EAB7A2624EFBC570044C6AD /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339E2124EF7245003EB34C /* EntityManager.swift */; };
 		2EF3F2C124F3EAB400E542AC /* UITextField+PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C024F3EAB400E542AC /* UITextField+PickerView.swift */; };
 		2EF3F2C424F46A9F00E542AC /* SeriesFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */; };
@@ -54,7 +56,8 @@
 /* Begin PBXFileReference section */
 		2E07F81124F39FA500413389 /* SeriesFormViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeriesFormViewController.storyboard; sourceTree = "<group>"; };
 		2E0ADD2924F3DF00007746BB /* SeriesFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesFormViewController.swift; sourceTree = "<group>"; };
-		2E19E0C824F37F33007BB654 /* SeriesListViewController+FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SeriesListViewController+FlowLayout.swift"; sourceTree = "<group>"; };
+		2E19E0C824F37F33007BB654 /* SeriesListFlowLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListFlowLayoutDelegate.swift; sourceTree = "<group>"; };
+		2E243F6624F6199100A1605C /* SeriesListViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SeriesListViewController+Delegate.swift"; sourceTree = "<group>"; };
 		2E339DFE24EE8636003EB34C /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
 		2E339E1024EF68A6003EB34C /* ShioriUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShioriUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E339E1424EF68A6003EB34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 		2E92B69824EE754F00187C4E /* CoreDataStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackTests.swift; sourceTree = "<group>"; };
 		2E92B69F24EE75E000187C4E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		2E9CDE3724F4C6C2000D76BD /* PickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerDataSource.swift; sourceTree = "<group>"; };
+		2E9CDE4C24F60EF8000D76BD /* SeriesListViewController+TabConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SeriesListViewController+TabConfiguration.swift"; sourceTree = "<group>"; };
 		2EF3F2C024F3EAB400E542AC /* UITextField+PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+PickerView.swift"; sourceTree = "<group>"; };
 		2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesFormViewModel.swift; sourceTree = "<group>"; };
 		2EF3F2C624F46AE900E542AC /* SeriesFormViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesFormViewModelTests.swift; sourceTree = "<group>"; };
@@ -217,7 +221,8 @@
 			children = (
 				2E92703824F3591E0099CF86 /* SeriesListViewController.swift */,
 				2E92704024F364F60099CF86 /* SeriesListViewController+DataSource.swift */,
-				2E19E0C824F37F33007BB654 /* SeriesListViewController+FlowLayout.swift */,
+				2E9CDE4C24F60EF8000D76BD /* SeriesListViewController+TabConfiguration.swift */,
+				2E243F6624F6199100A1605C /* SeriesListViewController+Delegate.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				2E92703B24F35D080099CF86 /* SeriesListViewController.storyboard */,
 				2E92704224F36AC70099CF86 /* SeriesListViewCell.swift */,
 				2E92704424F36C1E0099CF86 /* SeriesListViewCell.xib */,
+				2E19E0C824F37F33007BB654 /* SeriesListFlowLayoutDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -450,16 +456,18 @@
 				2E58B62124F210C300C168D2 /* SeriesListCellViewModel.swift in Sources */,
 				2E92703624F354440099CF86 /* TabBarController.swift in Sources */,
 				2E92B68D24EE74FE00187C4E /* Shiori.xcdatamodeld in Sources */,
+				2E243F6724F6199100A1605C /* SeriesListViewController+Delegate.swift in Sources */,
 				2E339E2624EFB182003EB34C /* Bookmark+CoreDataClass.swift in Sources */,
 				2EF3F2C424F46A9F00E542AC /* SeriesFormViewModel.swift in Sources */,
 				2E92703F24F35E300099CF86 /* ViewControllerWithStoryboard.swift in Sources */,
 				2E339E2224EF7245003EB34C /* EntityManager.swift in Sources */,
 				2E92B67524EE745F00187C4E /* AppDelegate.swift in Sources */,
 				2E92B67724EE745F00187C4E /* SceneDelegate.swift in Sources */,
+				2E9CDE4D24F60EF8000D76BD /* SeriesListViewController+TabConfiguration.swift in Sources */,
 				2E9CDE3824F4C6C2000D76BD /* PickerDataSource.swift in Sources */,
 				2E5070DB24F0847B00E2C840 /* Library.swift in Sources */,
 				2E0ADD2A24F3DF00007746BB /* SeriesFormViewController.swift in Sources */,
-				2E19E0C924F37F33007BB654 /* SeriesListViewController+FlowLayout.swift in Sources */,
+				2E19E0C924F37F33007BB654 /* SeriesListFlowLayoutDelegate.swift in Sources */,
 				2E92704124F364F60099CF86 /* SeriesListViewController+DataSource.swift in Sources */,
 				2E5070E224F154F600E2C840 /* SeriesListViewModel.swift in Sources */,
 				2E92703924F3591E0099CF86 /* SeriesListViewController.swift in Sources */,

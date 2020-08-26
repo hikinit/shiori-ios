@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
   // MARK: - View
@@ -40,19 +41,25 @@ class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
           let indexPath = collectionView.indexPathForItem(at: sender.location(in: collectionView))
     else { return }
 
+    let actionSheet = actionSheetAtIndexPath(indexPath: indexPath)
+    present(actionSheet, animated: true)
+  }
+
+  // MARK: - Action Sheet
+  func actionSheetAtIndexPath(indexPath: IndexPath) -> UIAlertController {
     let cell = viewModel.cellViewModelsAtIndexPath(indexPath)
-    let alert = UIAlertController(title: cell.title, message: nil, preferredStyle: .actionSheet)
+    let actionSheet = UIAlertController(title: cell.title, message: nil, preferredStyle: .actionSheet)
     let editAction = UIAlertAction(title: "Edit", style: .default) { _ in
       self.performSegue(withIdentifier: "SeriesFormViewController", sender: cell)
     }
     let deleteAction = UIAlertAction(title: "Delete", style: .destructive)
     let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
 
-    alert.addAction(editAction)
-    alert.addAction(deleteAction)
-    alert.addAction(cancelAction)
+    actionSheet.addAction(editAction)
+    actionSheet.addAction(deleteAction)
+    actionSheet.addAction(cancelAction)
 
-    present(alert, animated: true)
+    return actionSheet
   }
 
   // MARK: - CollectionView
@@ -62,12 +69,14 @@ class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
       forCellWithReuseIdentifier: viewModel.cellId)
     collectionView.dataSource = self
     collectionView.delegate = self
+    collectionView.alwaysBounceVertical = true
 
     if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
       layout.estimatedItemSize = .zero
     }
   }
 
+  // MARK: - View Model
   private func setupViewModel() {
     let library = Library(coreDataStack: CoreDataStack.shared)
     viewModel = SeriesListViewModel(library: library)
@@ -93,14 +102,3 @@ extension SeriesListViewController {
   }
 }
 
-// MARK: - TabBarController configuration
-extension SeriesListViewController {
-  struct TabConfiguration {
-    static let title = "Series"
-    static let item = UITabBarItem(
-      title: Self.title,
-      image: UIImage(systemName: "book"),
-      selectedImage: UIImage(systemName: "book.fill")
-    )
-  }
-}

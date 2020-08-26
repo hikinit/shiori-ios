@@ -48,16 +48,27 @@ class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
   // MARK: - Action Sheet
   func actionSheetAtIndexPath(indexPath: IndexPath) -> UIAlertController {
     let cell = viewModel.cellViewModelsAtIndexPath(indexPath)
-    let actionSheet = UIAlertController(title: cell.title, message: nil, preferredStyle: .actionSheet)
-    let editAction = UIAlertAction(title: "Edit", style: .default) { _ in
-      self.performSegue(withIdentifier: "SeriesFormViewController", sender: cell)
-    }
-    let deleteAction = UIAlertAction(title: "Delete", style: .destructive)
-    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
 
-    actionSheet.addAction(editAction)
-    actionSheet.addAction(deleteAction)
-    actionSheet.addAction(cancelAction)
+    let deleteAlert = AlertBuilder(style: .alert)
+      .setTitle("Delete Confirmation")
+      .setMessage("Are you sure you want to delete \(cell.title)")
+      .addDestructiveAction("I want to Delete") { [weak self] _ in
+        self?.viewModel.deleteSeries(cell.series)
+        self?.viewModel.reloadDataSource {
+          self?.collectionView.reloadData()
+        }
+      }
+      .build()
+
+    let actionSheet = AlertBuilder(style: .actionSheet)
+      .setTitle(cell.title)
+      .addDefaultAction("Edit") { _ in
+        self.performSegue(withIdentifier: "SeriesFormViewController", sender: cell)
+      }
+      .addDestructiveAction("Delete") { _ in
+        self.present(deleteAlert, animated: true)
+      }
+      .build()
 
     return actionSheet
   }

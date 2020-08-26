@@ -30,6 +30,10 @@ class SeriesListViewModel {
     }
   }
 
+  func deleteSeries(_ series: Series) {
+    library.deleteSeries(series)
+  }
+
   func reloadDataSource(completion: @escaping () -> ()) {
     getAllSeries()
     completion()

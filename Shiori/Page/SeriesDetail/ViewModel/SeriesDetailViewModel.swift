@@ -9,8 +9,9 @@ import Foundation
 
 class SeriesDetailViewModel {
   private var library: Library
+  var series: Series
 
-  var detailViewModel: SeriesListCellViewModel
+  var headerViewModel: SeriesListCellViewModel
   var numberOfRows = 0
   var viewDidLoad = {}
 
@@ -23,7 +24,8 @@ class SeriesDetailViewModel {
 
   init(library: Library, series: Series) {
     self.library = library
-    self.detailViewModel = SeriesListCellViewModel(series: series)
+    self.series = series
+    self.headerViewModel = SeriesListCellViewModel(series: series)
 
     viewDidLoad = { [weak self] in
       self?.getBookmarks()
@@ -40,12 +42,12 @@ class SeriesDetailViewModel {
   }
 
   func deleteThisSeries(completion: @escaping (Bool) -> ()) {
-    let deleted = library.deleteSeries(detailViewModel.series)
+    let deleted = library.deleteSeries(series)
     completion(deleted)
   }
 
   private func getBookmarks() {
-    bookmarks = detailViewModel.series.arrayBookmarks
+    bookmarks = series.arrayBookmarks
   }
 
   private func configureDataSource() {

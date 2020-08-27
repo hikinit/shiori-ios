@@ -37,11 +37,11 @@ class SeriesDetailViewModelTests: XCTestCase {
     sut = nil
   }
 
-  func testDetailViewModelProperties() {
-    XCTAssertEqual(sut.detailViewModel.title, series.title)
-    XCTAssertEqual(sut.detailViewModel.kind, series.kind)
-    XCTAssertEqual(sut.detailViewModel.status, series.status?.capitalized)
-    XCTAssertEqual(sut.detailViewModel.websiteURL, series.website)
+  func testHeaderViewModelProperties() {
+    XCTAssertEqual(sut.headerViewModel.title, series.title)
+    XCTAssertEqual(sut.headerViewModel.kind, series.kind)
+    XCTAssertEqual(sut.headerViewModel.status, series.status?.capitalized)
+    XCTAssertEqual(sut.headerViewModel.websiteURL, series.website)
   }
 
   func testNumberOfRows() {

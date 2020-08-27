@@ -41,9 +41,6 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
 
   override func viewWillAppear(_ animated: Bool) {
     viewModel.reloadDataSource()
-
-    print(viewModel.numberOfRows)
-
     fillUI()
   }
 

@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let window = UIWindow(windowScene: scene)
     self.window = window
 
-    window.rootViewController = TabBarController()
+    window.rootViewController = UINavigationController(rootViewController: SeriesListViewController.loadFromStoryboard())
     window.makeKeyAndVisible()
   }
 

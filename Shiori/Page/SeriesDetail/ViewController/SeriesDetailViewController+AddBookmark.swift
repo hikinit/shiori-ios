@@ -37,6 +37,9 @@ extension SeriesDetailViewController {
       else { return }
 
       self.viewModel.addNewBookmark(kind: kind, number: number)
+      self.viewModel.reloadDataSource {
+        self.tableView.reloadData()
+      }
     })
 
     alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))

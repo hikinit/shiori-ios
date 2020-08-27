@@ -9,6 +9,9 @@ import UIKit
 
 class SeriesDetailViewController: UITableViewController, ViewControllerWithStoryboard {
   private var headerView: SeriesDetailHeaderView!
+  @IBAction func trashDidTap(_ sender: UIBarButtonItem) {
+    deleteSeries()
+  }
 
   var detailViewModel: SeriesListCellViewModel!
   var series: Series!
@@ -20,6 +23,7 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
     setupViewModel()
   }
 
+  // MARK: - Setup View
   private func setupView() {
     let headerViewSize = CGSize(width: tableView.bounds.width, height: 220)
     headerView = SeriesDetailHeaderView(frame: CGRect(origin: .zero, size: headerViewSize))
@@ -36,6 +40,18 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
     headerView.setup(with: detailViewModel)
   }
 
+  // MARK: - Actions
+  private func deleteSeries() {
+    let deleteAlert = AlertBuilder(style: .alert)
+      .setTitle("Delete Confirmation")
+      .setMessage("Are you sure you want to delete \(detailViewModel.title)")
+      .addDestructiveAction("I want to Delete")
+      .build()
+
+    present(deleteAlert, animated: true)
+  }
+
+  // MARK: - View Model
   private func setupViewModel() {
     detailViewModel = SeriesListCellViewModel(series: series)
   }

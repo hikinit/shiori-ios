@@ -22,7 +22,11 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="JQM-AW-lXR">
                         <rightBarButtonItems>
                             <barButtonItem title="Add Bookmark" image="plus" catalog="system" id="hzP-9V-c9R"/>
-                            <barButtonItem title="Delete" image="trash" catalog="system" id="wHH-ad-MzJ"/>
+                            <barButtonItem title="Delete" image="trash" catalog="system" id="wHH-ad-MzJ">
+                                <connections>
+                                    <action selector="trashDidTap:" destination="AYw-3T-fED" id="aaS-ih-oeZ"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="Edit" image="square.and.pencil" catalog="system" id="EAr-BX-h4Y" userLabel="Edit Button">
                                 <connections>
                                     <segue destination="y1n-ek-unG" kind="presentation" identifier="SeriesFormViewController" modalPresentationStyle="fullScreen" id="KdH-Hd-YYI"/>

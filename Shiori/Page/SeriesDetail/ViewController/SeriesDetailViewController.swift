@@ -13,14 +13,19 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
     deleteSeries()
   }
 
+  @IBAction func addDidTap(_ sender: UIBarButtonItem) {
+    addBookmark()
+  }
+
   var series: Series!
   var viewModel: SeriesDetailViewModel!
+  var kindPickerDataSource: PickerDataSource!
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    setupView()
     setupViewModel()
+    setupView()
   }
 
   // MARK: - Setup View
@@ -29,10 +34,16 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
     headerView = SeriesDetailHeaderView(frame: CGRect(origin: .zero, size: headerViewSize))
 
     tableView.tableHeaderView = headerView
+    tableView.register(BookmarkCellView.self, forCellReuseIdentifier: viewModel.cellId)
+
     navigationItem.largeTitleDisplayMode = .never
   }
 
   override func viewWillAppear(_ animated: Bool) {
+    viewModel.reloadDataSource()
+
+    print(viewModel.numberOfRows)
+
     fillUI()
   }
 

@@ -11,6 +11,7 @@ class SeriesDetailViewModel {
   private var library: Library
   var series: Series
 
+  let cellId = "BookmarkCell"
   var headerViewModel: SeriesListCellViewModel
   var numberOfRows = 0
   var viewDidLoad = {}
@@ -45,6 +46,16 @@ class SeriesDetailViewModel {
     let deleted = library.deleteSeries(series)
     getBookmarks()
     completion(deleted)
+  }
+
+  func addNewBookmark(kind: String, number: Float) {
+    library.addBookmark(
+      number: number,
+      kind: Bookmark.Kind.init(rawValue: kind.lowercased())!,
+      name: nil,
+      to: series)
+
+    getBookmarks()
   }
 
   private func getBookmarks() {

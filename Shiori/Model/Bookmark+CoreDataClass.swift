@@ -33,7 +33,7 @@ public class Bookmark: NSManagedObject {
 }
 
 extension Bookmark {
-  enum Kind: String {
+  enum Kind: String, CaseIterable {
     case chapter, volume
   }
 }

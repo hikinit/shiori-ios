@@ -21,7 +21,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="JQM-AW-lXR">
                         <rightBarButtonItems>
-                            <barButtonItem title="Add Bookmark" image="plus" catalog="system" id="hzP-9V-c9R"/>
+                            <barButtonItem title="Add Bookmark" image="plus" catalog="system" id="hzP-9V-c9R">
+                                <connections>
+                                    <action selector="addDidTap:" destination="AYw-3T-fED" id="tSf-2v-dZq"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="Delete" image="trash" catalog="system" id="wHH-ad-MzJ">
                                 <connections>
                                     <action selector="trashDidTap:" destination="AYw-3T-fED" id="aaS-ih-oeZ"/>

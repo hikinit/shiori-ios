@@ -13,8 +13,8 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
     deleteSeries()
   }
 
-  var detailViewModel: SeriesListCellViewModel!
   var series: Series!
+  var viewModel: SeriesDetailViewModel!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -37,19 +37,19 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
   }
 
   private func fillUI() {
-    headerView.setup(with: detailViewModel)
+    headerView.setup(with: viewModel.headerViewModel)
   }
 
   // MARK: - Actions
   private func deleteSeries() {
     let deleteAlert = AlertBuilder(style: .alert)
       .setTitle("Delete Confirmation")
-      .setMessage("Are you sure you want to delete \(detailViewModel.title)?")
+      .setMessage("Are you sure you want to delete \(viewModel.headerViewModel.title)?")
       .addDestructiveAction("I want to Delete") { [weak self] _ in
-        self?.detailViewModel.delete {
+        self?.viewModel.deleteThisSeries {
+          guard $0 else { return }
           self?.navigationController?.popViewController(animated: true)
         }
-
       }
       .build()
 
@@ -57,10 +57,9 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
   }
 
   // MARK: - View Model
-  private func setupViewModel() {
+  func setupViewModel() {
     let library = Library(coreDataStack: CoreDataStack.shared)
-    detailViewModel = SeriesListCellViewModel(series: series)
-    detailViewModel.library = library
+    viewModel = SeriesDetailViewModel(library: library, series: series)
   }
 }
 
@@ -70,11 +69,10 @@ extension SeriesDetailViewController {
     switch segue.identifier {
     case "SeriesFormViewController":
       guard let nav = segue.destination as? UINavigationController,
-            let vc = nav.topViewController as? SeriesFormViewController,
-            let cellViewModel = detailViewModel
+            let vc = nav.topViewController as? SeriesFormViewController
       else { return }
 
-      vc.series = cellViewModel.series
+      vc.series = viewModel.series
     default:
       break
     }

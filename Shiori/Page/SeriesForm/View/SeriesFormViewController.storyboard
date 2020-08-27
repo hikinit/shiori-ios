@@ -105,7 +105,10 @@
                                                 <textField opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Link related to the series" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8hA-zY-qtJ" userLabel="Website Field">
                                                     <rect key="frame" x="20" y="11" width="374" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="URL" textContentType="url"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" smartDashesType="no" textContentType="url"/>
+                                                    <connections>
+                                                        <action selector="titleFieldDidEditingChange:" destination="lpf-mn-gkh" eventType="editingChanged" id="kCp-cx-AtG"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>

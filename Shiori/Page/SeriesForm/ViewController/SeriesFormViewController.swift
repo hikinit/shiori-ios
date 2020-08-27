@@ -56,7 +56,7 @@ class SeriesFormViewController: UITableViewController, ViewControllerWithStorybo
 
     createPickerView(textField: kindField, item: viewModel.kindOptions)
     createPickerView(textField: statusField, item: viewModel.statusOptions)
-    saveButtonToggleEnable()
+    saveButtonCheckEnable()
   }
 
   private func updateViewModelProperties(textField: UITextField) {
@@ -68,10 +68,10 @@ class SeriesFormViewController: UITableViewController, ViewControllerWithStorybo
       default: break
     }
 
-    saveButtonToggleEnable()
+    saveButtonCheckEnable()
   }
 
-  private func saveButtonToggleEnable() {
+  private func saveButtonCheckEnable() {
     saveButton.isEnabled = viewModel.saveButtonIsEnabled
   }
 

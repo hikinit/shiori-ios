@@ -9,25 +9,30 @@ import Foundation
 
 class SeriesListCellViewModel {
   var series: Series
-  var title: String
-  var kind: String
-  var status: String
-  var hasWebsite: Bool
-  var websiteURL: URL?
+
+  var title: String {
+    series.title ?? ""
+  }
+
+  var kind: String {
+    series.kind ?? ""
+  }
+
+  var status: String {
+    series.status?.capitalized ?? ""
+  }
+
+  var hasWebsite: Bool {
+    guard series.website != nil else { return false }
+    return true
+  }
+
+  var websiteURL: URL? {
+    series.website
+  }
 
   init(series: Series) {
     self.series = series
-    self.title = series.title ?? ""
-    self.kind = series.kind ?? ""
-    self.status = series.status?.capitalized ?? ""
-
-    guard let website = series.website else {
-      self.hasWebsite = false
-      return
-    }
-
-    self.hasWebsite = true
-    self.websiteURL = website
   }
 }
 

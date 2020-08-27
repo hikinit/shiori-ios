@@ -36,13 +36,14 @@ class SeriesDetailViewModel {
     return dataSource[indexPath.item]
   }
 
-  func reloadDataSource(completion: @escaping () -> ()) {
+  func reloadDataSource(completion: @escaping () -> () = {}) {
     getBookmarks()
     completion()
   }
 
-  func deleteThisSeries(completion: @escaping (Bool) -> ()) {
+  func deleteThisSeries(completion: @escaping (Bool) -> () = {_ in}) {
     let deleted = library.deleteSeries(series)
+    getBookmarks()
     completion(deleted)
   }
 

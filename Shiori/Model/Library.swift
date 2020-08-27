@@ -42,8 +42,8 @@ extension Library {
     return seriesManager.getAll()
   }
 
-  func deleteSeries(_ series: Series) {
-    seriesManager.delete(series)
+  func deleteSeries(_ series: Series) -> Bool {
+    return seriesManager.delete(series)
   }
 
   func updateSeries(_ series: Series) {
@@ -76,8 +76,8 @@ extension Library {
     bookmarkManager.update(bookmark)
   }
 
-  func deleteBookmark(_ bookmark: Bookmark) {
-    bookmarkManager.delete(bookmark)
+  func deleteBookmark(_ bookmark: Bookmark) -> Bool {
+    return bookmarkManager.delete(bookmark)
   }
 
   func getAllBookmarkFromSeries(series: Series) -> [Bookmark] {

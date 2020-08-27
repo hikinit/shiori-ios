@@ -67,9 +67,11 @@ class EntityManagerTests: XCTestCase {
     var allSeries = sut.getAll()
     XCTAssertEqual(allSeries.count, 1)
 
-    sut.delete(newSeries)
+    let deleted = sut.delete(newSeries)
     allSeries = sut.getAll()
+
     XCTAssertEqual(allSeries.count, 0)
+    XCTAssertTrue(deleted)
   }
 
   func testUpdateSeries() {

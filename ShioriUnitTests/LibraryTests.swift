@@ -57,10 +57,11 @@ extension LibraryTests {
     XCTAssertEqual(allSeries.count, 1)
     XCTAssertFalse(newSeries.isDeleted)
 
-    sut.deleteSeries(newSeries)
+    let deleted = sut.deleteSeries(newSeries)
     allSeries = sut.getAllSeries()
 
     XCTAssertEqual(allSeries.count, 0)
+    XCTAssertTrue(deleted)
   }
 
   func testUpdateSeries() {
@@ -104,10 +105,11 @@ extension LibraryTests {
 
     XCTAssertEqual(series.arrayBookmarks.count, 2)
 
-    sut.deleteBookmark(chapter2)
+    let deleted = sut.deleteBookmark(chapter2)
 
     XCTAssertEqual(series.arrayBookmarks.count, 1)
     XCTAssertEqual(series.arrayBookmarks.first, chapter1)
+    XCTAssertTrue(deleted)
   }
 
   func testGetAllBookmark() {

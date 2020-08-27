@@ -37,9 +37,12 @@ extension EntityManager {
     return entity
   }
 
-  func delete(_ entity: Entity) {
+  func delete(_ entity: Entity) -> Bool {
     context.delete(entity)
     coreDataStack.saveContext(context)
+
+    let isDeleted = entity.managedObjectContext == nil ? true : false
+    return isDeleted
   }
 
   func update(_ entity: Entity) {

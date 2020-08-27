@@ -39,9 +39,9 @@ class SeriesDetailViewModel {
     completion()
   }
 
-  func deleteThisSeries(completion: @escaping () -> ()) {
-    library.deleteSeries(detailViewModel.series)
-    completion()
+  func deleteThisSeries(completion: @escaping (Bool) -> ()) {
+    let deleted = library.deleteSeries(detailViewModel.series)
+    completion(deleted)
   }
 
   private func getBookmarks() {

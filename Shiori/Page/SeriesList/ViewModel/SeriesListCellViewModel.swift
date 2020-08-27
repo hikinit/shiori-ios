@@ -35,13 +35,6 @@ class SeriesListCellViewModel {
   init(series: Series) {
     self.series = series
   }
-
-  func delete(completion: @escaping () -> ()) {
-    guard let library = library else { return }
-    library.deleteSeries(series)
-
-    completion()
-  }
 }
 
 extension SeriesListCellViewModel: Equatable {

@@ -67,7 +67,7 @@ class SeriesDetailViewModelTests: XCTestCase {
     var deleted = false
 
     sut.deleteThisSeries {
-      deleted = true
+      deleted = $0
     }
 
     XCTAssertTrue(deleted)

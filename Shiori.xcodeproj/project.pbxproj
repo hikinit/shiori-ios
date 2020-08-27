@@ -56,6 +56,12 @@
 		2EF3F2C424F46A9F00E542AC /* SeriesFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */; };
 		2EF3F2C524F46AA500E542AC /* SeriesFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */; };
 		2EF3F2C724F46AE900E542AC /* SeriesFormViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C624F46AE900E542AC /* SeriesFormViewModelTests.swift */; };
+		2EF7B61B24F75D7100D3032F /* SeriesDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7B61A24F75D7100D3032F /* SeriesDetailViewModelTests.swift */; };
+		2EF7B61D24F75DBF00D3032F /* SeriesDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7B61C24F75DBF00D3032F /* SeriesDetailViewModel.swift */; };
+		2EF7B61E24F75E0E00D3032F /* SeriesDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7B61C24F75DBF00D3032F /* SeriesDetailViewModel.swift */; };
+		2EF7B62024F7657000D3032F /* BookmarkCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7B61F24F7657000D3032F /* BookmarkCellViewModel.swift */; };
+		2EF7B62224F765C400D3032F /* BookmarkCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7B62124F765C400D3032F /* BookmarkCellViewModelTests.swift */; };
+		2EF7B62324F765FA00D3032F /* BookmarkCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7B61F24F7657000D3032F /* BookmarkCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +109,10 @@
 		2EF3F2C024F3EAB400E542AC /* UITextField+PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+PickerView.swift"; sourceTree = "<group>"; };
 		2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesFormViewModel.swift; sourceTree = "<group>"; };
 		2EF3F2C624F46AE900E542AC /* SeriesFormViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesFormViewModelTests.swift; sourceTree = "<group>"; };
+		2EF7B61A24F75D7100D3032F /* SeriesDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetailViewModelTests.swift; sourceTree = "<group>"; };
+		2EF7B61C24F75DBF00D3032F /* SeriesDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetailViewModel.swift; sourceTree = "<group>"; };
+		2EF7B61F24F7657000D3032F /* BookmarkCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCellViewModel.swift; sourceTree = "<group>"; };
+		2EF7B62124F765C400D3032F /* BookmarkCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCellViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +233,8 @@
 				2E5070E424F1552200E2C840 /* SeriesListViewModelTests.swift */,
 				2E58B62224F210D500C168D2 /* SeriesListCellViewModelTests.swift */,
 				2EF3F2C624F46AE900E542AC /* SeriesFormViewModelTests.swift */,
+				2EF7B61A24F75D7100D3032F /* SeriesDetailViewModelTests.swift */,
+				2EF7B62124F765C400D3032F /* BookmarkCellViewModelTests.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -316,6 +328,7 @@
 			children = (
 				2EC6433324F648470020D2E0 /* View */,
 				2EC6433024F647E70020D2E0 /* ViewController */,
+				2EF7B61924F75CEE00D3032F /* ViewModel */,
 			);
 			path = SeriesDetail;
 			sourceTree = "<group>";
@@ -361,6 +374,15 @@
 			isa = PBXGroup;
 			children = (
 				2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2EF7B61924F75CEE00D3032F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2EF7B61C24F75DBF00D3032F /* SeriesDetailViewModel.swift */,
+				2EF7B61F24F7657000D3032F /* BookmarkCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -470,6 +492,7 @@
 				2E58B62424F210DC00C168D2 /* SeriesListCellViewModel.swift in Sources */,
 				2E339E1824EF68D3003EB34C /* CoreDataStackTests.swift in Sources */,
 				2E58B62324F210D500C168D2 /* SeriesListCellViewModelTests.swift in Sources */,
+				2EF7B61E24F75E0E00D3032F /* SeriesDetailViewModel.swift in Sources */,
 				2E339E1924EF68D5003EB34C /* TestCoreDataStack.swift in Sources */,
 				2E339E1F24EF7211003EB34C /* EntityManagerTests.swift in Sources */,
 				2E5070E524F1552200E2C840 /* SeriesListViewModelTests.swift in Sources */,
@@ -477,9 +500,12 @@
 				2E339E2F24EFB484003EB34C /* Series+CoreDataClass.swift in Sources */,
 				2E5070D924F0846E00E2C840 /* LibraryTests.swift in Sources */,
 				2E339E1B24EF6940003EB34C /* Shiori.xcdatamodeld in Sources */,
+				2EF7B61B24F75D7100D3032F /* SeriesDetailViewModelTests.swift in Sources */,
+				2EF7B62224F765C400D3032F /* BookmarkCellViewModelTests.swift in Sources */,
 				2E339E2E24EFB481003EB34C /* Bookmark+CoreDataClass.swift in Sources */,
 				2E5070E324F1550100E2C840 /* SeriesListViewModel.swift in Sources */,
 				2E5070DC24F0847F00E2C840 /* Library.swift in Sources */,
+				2EF7B62324F765FA00D3032F /* BookmarkCellViewModel.swift in Sources */,
 				2EAB7A2624EFBC570044C6AD /* EntityManager.swift in Sources */,
 				2E339E1A24EF693D003EB34C /* CoreDataStack.swift in Sources */,
 				2EF3F2C524F46AA500E542AC /* SeriesFormViewModel.swift in Sources */,
@@ -492,6 +518,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E92B6A024EE75E000187C4E /* CoreDataStack.swift in Sources */,
+				2EF7B62024F7657000D3032F /* BookmarkCellViewModel.swift in Sources */,
 				2E92B69024EE752000187C4E /* Series+CoreDataClass.swift in Sources */,
 				2EF3F2C124F3EAB400E542AC /* UITextField+PickerView.swift in Sources */,
 				2E58B62124F210C300C168D2 /* SeriesListCellViewModel.swift in Sources */,
@@ -513,6 +540,7 @@
 				2E19E0C924F37F33007BB654 /* SeriesListFlowLayoutDelegate.swift in Sources */,
 				2E92704124F364F60099CF86 /* SeriesListViewController+DataSource.swift in Sources */,
 				2E243F6B24F61D5B00A1605C /* AlertBuilder.swift in Sources */,
+				2EF7B61D24F75DBF00D3032F /* SeriesDetailViewModel.swift in Sources */,
 				2E5070E224F154F600E2C840 /* SeriesListViewModel.swift in Sources */,
 				2E92703924F3591E0099CF86 /* SeriesListViewController.swift in Sources */,
 				2E92704324F36AC70099CF86 /* SeriesListViewCell.swift in Sources */,

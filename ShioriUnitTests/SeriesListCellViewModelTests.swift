@@ -34,5 +34,10 @@ class SeriesListCellViewModelTests: XCTestCase {
     XCTAssertTrue(sut.hasWebsite)
     XCTAssertNotNil(sut.websiteURL)
     XCTAssertEqual(sut.websiteURL, series.website)
+
+    series.website = nil
+
+    XCTAssertFalse(sut.hasWebsite)
+    XCTAssertNil(sut.websiteURL)
   }
 }

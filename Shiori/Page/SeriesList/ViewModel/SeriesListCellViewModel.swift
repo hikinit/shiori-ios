@@ -9,18 +9,17 @@ import Foundation
 
 class SeriesListCellViewModel {
   var series: Series
-  var library: Library?
 
   var title: String {
-    series.title ?? ""
+    series.title!
   }
 
   var kind: String {
-    series.kind ?? ""
+    series.kind!
   }
 
   var status: String {
-    series.status?.capitalized ?? ""
+    series.status!.capitalized
   }
 
   var hasWebsite: Bool {

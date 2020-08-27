@@ -11,7 +11,7 @@ class BookmarkCellViewModel {
   private var bookmark: Bookmark
 
   var name: String {
-    bookmark.name ?? ""
+    bookmark.name!
   }
 
   var number: String {
@@ -19,7 +19,7 @@ class BookmarkCellViewModel {
   }
 
   var kind: String {
-    bookmark.kind?.capitalized ?? ""
+    bookmark.kind!.capitalized
   }
 
   var timestamp: String {

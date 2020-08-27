@@ -18,7 +18,7 @@
                 <outlet property="kindLabel" destination="GFn-lZ-ixq" id="ooF-EX-dEU"/>
                 <outlet property="statusLabel" destination="5j5-cA-XbK" id="IaX-VZ-t8x"/>
                 <outlet property="titleLabel" destination="2ki-7P-cyh" id="AtY-YU-0H0"/>
-                <outlet property="websiteButton" destination="feP-Pm-s6u" id="YZn-ri-mRp"/>
+                <outlet property="websiteButton" destination="riA-mm-8Zs" id="6qj-I5-6Dd"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -48,7 +48,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IUh-ti-Yzu">
-                                        <rect key="frame" x="170" y="16" width="228" height="166.5"/>
+                                        <rect key="frame" x="170" y="16" width="228" height="134.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is It Wrong to Try to Pick Up Girls in a Dungeon?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.85000002384185791" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ki-7P-cyh" userLabel="Title">
                                                 <rect key="frame" x="0.0" y="0.0" width="188.5" height="82.5"/>
@@ -68,12 +68,15 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feP-Pm-s6u" userLabel="Website">
-                                                <rect key="frame" x="0.0" y="142.5" width="25" height="24"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riA-mm-8Zs">
+                                                <rect key="frame" x="0.0" y="134.5" width="25" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="safari" catalog="system" symbolScale="large"/>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="websiteButtonDidTap:" destination="-1" eventType="touchUpInside" id="tId-uB-zD9"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

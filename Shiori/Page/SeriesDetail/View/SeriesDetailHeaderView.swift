@@ -18,6 +18,13 @@ class SeriesDetailHeaderView: UIView {
   @IBOutlet weak var websiteButton: UIButton!
   @IBOutlet weak var detailStackView: UIStackView!
 
+  @IBAction func websiteButtonDidTap(_ sender: UIButton) {
+    goToWebsite()
+  }
+
+  // MARK: - Properties
+  private var websiteURL: URL?
+
 
   // MARK: - Initializer
   override init(frame: CGRect) {
@@ -46,6 +53,18 @@ class SeriesDetailHeaderView: UIView {
     titleLabel.text = model.title
     kindLabel.text = model.kind
     statusLabel.text = model.status
+
+    if model.hasWebsite {
+      websiteButton.isHidden = false
+      websiteURL = model.websiteURL
+    }
+  }
+
+  private func goToWebsite() {
+    guard let url = websiteURL,
+          UIApplication.shared.canOpenURL(url) else { return }
+
+    UIApplication.shared.open(url)
   }
 
   // MARK: - Constraint

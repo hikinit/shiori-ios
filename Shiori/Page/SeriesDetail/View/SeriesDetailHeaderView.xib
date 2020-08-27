@@ -28,7 +28,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCp-mf-rQm" userLabel="Container View">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="239"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover-dummy" translatesAutoresizingMaskIntoConstraints="NO" id="8Mg-1h-H8n" userLabel="Background Image">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover-unavailable" translatesAutoresizingMaskIntoConstraints="NO" id="8Mg-1h-H8n" userLabel="Background Image">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="239"/>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Rg-9b-oPt" userLabel="Background Color">
@@ -120,7 +120,6 @@
         </view>
     </objects>
     <resources>
-        <image name="cover-dummy" width="208" height="299"/>
         <image name="cover-unavailable" width="202" height="302"/>
         <image name="safari" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">

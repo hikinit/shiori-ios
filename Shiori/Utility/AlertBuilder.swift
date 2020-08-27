@@ -9,10 +9,12 @@ import UIKit
 
 class AlertBuilder {
   typealias ActionHandler = ((UIAlertAction) -> Void)?
+  typealias TextFieldHandler = ((UITextField) -> Void)?
 
   var title: String?
   var message: String?
   private var actions = [UIAlertAction]()
+  private var textFieldHandlers = [TextFieldHandler]()
   private var style: UIAlertController.Style
 
   init(style: UIAlertController.Style, cancel: Bool = true) {
@@ -22,6 +24,10 @@ class AlertBuilder {
 
   func build() -> UIAlertController {
     let vc = UIAlertController(title: title, message: message, preferredStyle: style)
+
+    textFieldHandlers.forEach {
+      vc.addTextField(configurationHandler: $0)
+    }
 
     actions.forEach {
       vc.addAction($0)
@@ -36,6 +42,11 @@ class AlertBuilder {
 
   func setMessage(_ message: String) -> Self {
     return setAndReturn(\.message, to: message)
+  }
+
+  func addTextField(_ handler: TextFieldHandler) -> Self {
+    textFieldHandlers.append(handler)
+    return self
   }
 
   func addDefaultAction(_ title: String, handler: ActionHandler = nil) -> Self {

@@ -51,7 +51,7 @@ class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
 
     let deleteAlert = AlertBuilder(style: .alert)
       .setTitle("Delete Confirmation")
-      .setMessage("Are you sure you want to delete \(cell.title)")
+      .setMessage("Are you sure you want to delete \(cell.title)?")
       .addDestructiveAction("I want to Delete") { [weak self] _ in
         self?.viewModel.deleteSeries(cell.series)
         self?.viewModel.reloadDataSource {

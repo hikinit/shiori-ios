@@ -44,7 +44,7 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
   private func deleteSeries() {
     let deleteAlert = AlertBuilder(style: .alert)
       .setTitle("Delete Confirmation")
-      .setMessage("Are you sure you want to delete \(detailViewModel.title)")
+      .setMessage("Are you sure you want to delete \(detailViewModel.title)?")
       .addDestructiveAction("I want to Delete")
       .build()
 

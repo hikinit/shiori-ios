@@ -53,8 +53,8 @@ class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
       .setTitle("Delete Confirmation")
       .setMessage("Are you sure you want to delete \(cell.title)?")
       .addDestructiveAction("I want to Delete") { [weak self] _ in
-        self?.viewModel.deleteSeries(cell.series)
-        self?.viewModel.reloadDataSource {
+        self?.viewModel.deleteSeries(cell.series) {
+          guard $0 else { return }
           self?.collectionView.reloadData()
         }
       }

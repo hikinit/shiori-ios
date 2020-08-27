@@ -9,6 +9,7 @@ import Foundation
 
 class SeriesListCellViewModel {
   var series: Series
+  var library: Library?
 
   var title: String {
     series.title ?? ""
@@ -33,6 +34,13 @@ class SeriesListCellViewModel {
 
   init(series: Series) {
     self.series = series
+  }
+
+  func delete(completion: @escaping () -> ()) {
+    guard let library = library else { return }
+    library.deleteSeries(series)
+
+    completion()
   }
 }
 

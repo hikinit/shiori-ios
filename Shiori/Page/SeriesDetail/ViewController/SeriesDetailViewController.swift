@@ -45,7 +45,12 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
     let deleteAlert = AlertBuilder(style: .alert)
       .setTitle("Delete Confirmation")
       .setMessage("Are you sure you want to delete \(detailViewModel.title)?")
-      .addDestructiveAction("I want to Delete")
+      .addDestructiveAction("I want to Delete") { [weak self] _ in
+        self?.detailViewModel.delete {
+          self?.navigationController?.popViewController(animated: true)
+        }
+
+      }
       .build()
 
     present(deleteAlert, animated: true)
@@ -53,7 +58,9 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
 
   // MARK: - View Model
   private func setupViewModel() {
+    let library = Library(coreDataStack: CoreDataStack.shared)
     detailViewModel = SeriesListCellViewModel(series: series)
+    detailViewModel.library = library
   }
 }
 

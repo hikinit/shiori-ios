@@ -30,6 +30,7 @@ class SeriesListViewModelTests: XCTestCase {
   }()
 }
 
+// MARK: - Test
 extension SeriesListViewModelTests {
   func testNumberOfRows() {
     XCTAssertEqual(sut.numberOfRows, cellViewModels.count)
@@ -38,5 +39,27 @@ extension SeriesListViewModelTests {
   func testCellViewModelForIndexPath() {
     let indexPath = IndexPath(item: 1, section: 0)
     XCTAssertEqual(sut.cellViewModelsAtIndexPath(indexPath), cellViewModels[1])
+  }
+
+  func testDeleteSeries() {
+    let cellViewModel = sut.cellViewModelsAtIndexPath(IndexPath(item: 1, section: 0))
+
+    var deleted = false
+
+    sut.deleteSeries(cellViewModel.series) {
+      deleted = $0
+    }
+
+    XCTAssertTrue(deleted)
+  }
+
+  func testReloadDataSource() {
+    var reloaded = false
+
+    sut.reloadDataSource {
+      reloaded = true
+    }
+
+    XCTAssertTrue(reloaded)
   }
 }

@@ -19,7 +19,7 @@ class SeriesListCellViewModel {
     self.series = series
     self.title = series.title ?? ""
     self.kind = series.kind ?? ""
-    self.status = series.status ?? ""
+    self.status = series.status?.capitalized ?? ""
 
     guard let website = series.website else {
       self.hasWebsite = false

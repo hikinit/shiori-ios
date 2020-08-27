@@ -30,7 +30,7 @@ class SeriesListCellViewModelTests: XCTestCase {
   func testProperties() {
     XCTAssertEqual(sut.title, series.title)
     XCTAssertEqual(sut.kind, series.kind)
-    XCTAssertEqual(sut.status, series.status)
+    XCTAssertEqual(sut.status, series.status?.capitalized)
     XCTAssertTrue(sut.hasWebsite)
     XCTAssertNotNil(sut.websiteURL)
     XCTAssertEqual(sut.websiteURL, series.website)

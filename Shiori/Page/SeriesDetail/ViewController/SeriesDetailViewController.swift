@@ -8,22 +8,29 @@
 import UIKit
 
 class SeriesDetailViewController: UITableViewController, ViewControllerWithStoryboard {
+  private var headerView: SeriesDetailHeaderView!
+
   var detailViewModel: SeriesListCellViewModel!
   var series: Series!
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    setupViewModel()
     setupView()
+    setupViewModel()
+    fillUI()
   }
 
   private func setupView() {
     let headerViewSize = CGSize(width: tableView.bounds.width, height: 220)
-    let headerView = SeriesDetailHeaderView(frame: CGRect(origin: .zero, size: headerViewSize))
+    headerView = SeriesDetailHeaderView(frame: CGRect(origin: .zero, size: headerViewSize))
 
     tableView.tableHeaderView = headerView
     navigationItem.largeTitleDisplayMode = .never
+  }
+
+  private func fillUI() {
+    headerView.setup(with: detailViewModel)
   }
 
   private func setupViewModel() {

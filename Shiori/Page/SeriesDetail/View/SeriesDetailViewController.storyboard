@@ -23,13 +23,27 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Add Bookmark" image="plus" catalog="system" id="hzP-9V-c9R"/>
                             <barButtonItem title="Delete" image="trash" catalog="system" id="wHH-ad-MzJ"/>
-                            <barButtonItem title="Edit" image="square.and.pencil" catalog="system" id="EAr-BX-h4Y" userLabel="Edit Button"/>
+                            <barButtonItem title="Edit" image="square.and.pencil" catalog="system" id="EAr-BX-h4Y" userLabel="Edit Button">
+                                <connections>
+                                    <segue destination="y1n-ek-unG" kind="presentation" identifier="SeriesFormViewController" modalPresentationStyle="fullScreen" id="KdH-Hd-YYI"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6K-wG-1XU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-365.21739130434787" y="118.52678571428571"/>
+        </scene>
+        <!--SeriesFormViewControllerNavigation-->
+        <scene sceneID="sII-pZ-nJh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SeriesFormViewController" referencedIdentifier="SeriesFormViewControllerNavigation" id="y1n-ek-unG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yUO-RA-RxC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0aD-rL-DHo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="470" y="119"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RKf-gb-G4Z">

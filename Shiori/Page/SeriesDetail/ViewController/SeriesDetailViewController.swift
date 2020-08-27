@@ -18,7 +18,6 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
 
     setupView()
     setupViewModel()
-    fillUI()
   }
 
   private func setupView() {
@@ -29,11 +28,32 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
     navigationItem.largeTitleDisplayMode = .never
   }
 
+  override func viewWillAppear(_ animated: Bool) {
+    fillUI()
+  }
+
   private func fillUI() {
     headerView.setup(with: detailViewModel)
   }
 
   private func setupViewModel() {
     detailViewModel = SeriesListCellViewModel(series: series)
+  }
+}
+
+// MARK: - Segue
+extension SeriesDetailViewController {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    switch segue.identifier {
+    case "SeriesFormViewController":
+      guard let nav = segue.destination as? UINavigationController,
+            let vc = nav.topViewController as? SeriesFormViewController,
+            let cellViewModel = detailViewModel
+      else { return }
+
+      vc.series = cellViewModel.series
+    default:
+      break
+    }
   }
 }

@@ -40,9 +40,8 @@ class SeriesFormViewController: UITableViewController, ViewControllerWithStorybo
   }
 
   private func setupViewModel() {
-    let library = Library(coreDataStack: CoreDataStack.shared)
     viewModel = SeriesFormViewModel(
-      library: library,
+      library: Library.shared,
       series: series
     )
   }

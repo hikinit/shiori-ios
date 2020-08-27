@@ -89,8 +89,7 @@ class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
 
   // MARK: - View Model
   private func setupViewModel() {
-    let library = Library(coreDataStack: CoreDataStack.shared)
-    viewModel = SeriesListViewModel(library: library)
+    viewModel = SeriesListViewModel(library: Library.shared)
   }
 
   var viewModel: SeriesListViewModel!

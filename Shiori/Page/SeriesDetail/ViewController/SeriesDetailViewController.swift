@@ -58,8 +58,7 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
 
   // MARK: - View Model
   func setupViewModel() {
-    let library = Library(coreDataStack: CoreDataStack.shared)
-    viewModel = SeriesDetailViewModel(library: library, series: series)
+    viewModel = SeriesDetailViewModel(library: Library.shared, series: series)
   }
 }
 

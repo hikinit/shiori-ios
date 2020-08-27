@@ -10,10 +10,12 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+  var library: Library!
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    library = Library(coreDataStack: CoreDataStack())
+
     return true
   }
 
@@ -34,3 +36,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension Library {
+  static var shared: Library {
+    get {
+      guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+        fatalError("Can't get App Delegate")
+      }
+
+      return appDelegate.library!
+    }
+  }
+}

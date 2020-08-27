@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SeriesListFlowLayoutDelegate: UICollectionViewFlowLayout {
+class SeriesListFlowLayout: UICollectionViewFlowLayout {
   let margin: CGFloat = 16
   let lineSpacing: CGFloat = 16
   let cellSpacing: CGFloat = 8

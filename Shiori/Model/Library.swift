@@ -39,7 +39,8 @@ extension Library {
   }
 
   func getAllSeries() -> [Series] {
-    return seriesManager.getAll()
+    let sortByTitle = NSSortDescriptor(key: "title", ascending: true)
+    return seriesManager.getAll(sorts: [sortByTitle])
   }
 
   func deleteSeries(_ series: Series) -> Bool {

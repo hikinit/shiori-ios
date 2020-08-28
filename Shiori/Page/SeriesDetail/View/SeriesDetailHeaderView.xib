@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17120"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SeriesDetailHeaderView" customModule="Shiori" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundImageView" destination="8Mg-1h-H8n" id="68Z-7y-dQa"/>
+                <outlet property="coverImageActivityView" destination="gqY-6k-ycv" id="s3B-en-jaz"/>
                 <outlet property="coverImageView" destination="8gH-vN-uUj" id="syd-q3-Ja0"/>
                 <outlet property="detailStackView" destination="IUh-ti-Yzu" id="7oj-7k-HcI"/>
                 <outlet property="headerView" destination="5Ks-Fb-UwC" id="128-sW-CJx"/>
@@ -80,8 +82,14 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="gqY-6k-ycv">
+                                        <rect key="frame" x="66.5" y="101" width="37" height="37"/>
+                                        <color key="color" name="AccentColor"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="gqY-6k-ycv" firstAttribute="centerX" secondItem="8gH-vN-uUj" secondAttribute="centerX" id="0K1-T2-bzj"/>
+                                    <constraint firstItem="gqY-6k-ycv" firstAttribute="centerY" secondItem="8gH-vN-uUj" secondAttribute="centerY" id="PoJ-F1-pwL"/>
                                     <constraint firstAttribute="trailing" secondItem="IUh-ti-Yzu" secondAttribute="trailing" constant="16" id="TQv-BQ-6yn"/>
                                     <constraint firstItem="IUh-ti-Yzu" firstAttribute="leading" secondItem="8gH-vN-uUj" secondAttribute="trailing" constant="16" id="i7x-JY-sF8"/>
                                     <constraint firstItem="IUh-ti-Yzu" firstAttribute="top" secondItem="8gH-vN-uUj" secondAttribute="top" id="i9j-5h-VlG"/>
@@ -125,6 +133,9 @@
     <resources>
         <image name="cover-unavailable" width="202" height="302"/>
         <image name="safari" catalog="system" width="128" height="121"/>
+        <namedColor name="AccentColor">
+            <color red="0.90588235294117647" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

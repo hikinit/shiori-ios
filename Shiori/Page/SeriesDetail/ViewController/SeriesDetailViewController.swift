@@ -20,7 +20,15 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
   var series: Series!
   var viewModel: SeriesDetailViewModel!
   var kindPickerDataSource: PickerDataSource!
-  var imagePicker: ImagePicker!
+
+  lazy var imagePicker: UIImagePickerController  = {
+    let imagePicker = UIImagePickerController()
+    imagePicker.allowsEditing = false
+    imagePicker.delegate = self
+    imagePicker.sourceType = .photoLibrary
+
+    return imagePicker
+  }()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -39,8 +47,6 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
 
     navigationItem.largeTitleDisplayMode = .never
     addCoverImageGesture()
-
-    imagePicker = ImagePicker(presentationController: self, delegate: self)
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -76,7 +82,19 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
   }
 
   @objc private func imageDidTap() {
-    imagePicker.present()
+    let alert = AlertBuilder(style: .actionSheet)
+      .setTitle("Cover for \(viewModel.headerViewModel.title)")
+      .addDefaultAction("Change") { _ in
+        self.headerView.coverImageActivityView.startAnimating()
+        self.present(self.imagePicker, animated: true)
+      }
+      .addDestructiveAction("Delete") { _ in
+        self.viewModel.deleteCover()
+        self.fillUI()
+      }
+      .build()
+
+    present(alert, animated: true)
   }
 
   // MARK: - View Model
@@ -101,9 +119,10 @@ extension SeriesDetailViewController {
   }
 }
 
-extension SeriesDetailViewController: ImagePickerDelegate {
-  func didSelect(image: UIImage?) {
-    guard let image = image else { return }
+extension SeriesDetailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    guard let image = info[.originalImage] as? UIImage else { return }
+
     headerView.coverImageView.image = image
     headerView.backgroundImageView.image = image
 
@@ -119,5 +138,13 @@ extension SeriesDetailViewController: ImagePickerDelegate {
         return
       }
     }
+
+    headerView.coverImageActivityView.stopAnimating()
+    dismiss(animated: true)
+  }
+
+  func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    headerView.coverImageActivityView.stopAnimating()
+    dismiss(animated: true)
   }
 }

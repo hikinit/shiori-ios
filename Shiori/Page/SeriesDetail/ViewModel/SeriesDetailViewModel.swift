@@ -48,6 +48,22 @@ class SeriesDetailViewModel {
     completion(deleted)
   }
 
+  func deleteCover() {
+    series.cover = nil
+    library.updateSeries(series)
+
+    if let coverURL = series.cover?.lastPathComponent {
+      let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+      let fileURL = documentsDirectory.appendingPathComponent(coverURL)
+
+      do {
+        try FileManager.default.removeItem(atPath: fileURL.path)
+      } catch {
+        return
+      }
+    }
+  }
+
   func deleteBookmarkAtIndexPath(_ indexPath: IndexPath, completion: @escaping (Bool) -> () = {_ in}) {
     let bookmark = cellViewModelAtIndexPath(indexPath).bookmark
     let deleted = library.deleteBookmark(bookmark)

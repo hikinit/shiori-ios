@@ -17,6 +17,7 @@ class SeriesDetailHeaderView: UIView {
   @IBOutlet weak var statusLabel: UILabel!
   @IBOutlet weak var websiteButton: UIButton!
   @IBOutlet weak var detailStackView: UIStackView!
+  @IBOutlet weak var coverImageActivityView: UIActivityIndicatorView!
 
   @IBAction func websiteButtonDidTap(_ sender: UIButton) {
     goToWebsite()
@@ -62,8 +63,11 @@ class SeriesDetailHeaderView: UIView {
 
     if let coverData = model.cover {
       coverImageView.image = UIImage(data: coverData)
-      backgroundImageView.image = coverImageView.image
+    } else {
+      coverImageView.image = UIImage(imageLiteralResourceName: "cover-unavailable")
     }
+
+    backgroundImageView.image = coverImageView.image
   }
   
 

@@ -112,7 +112,7 @@ extension SeriesDetailViewController: ImagePickerDelegate {
 
     if let data = image.jpegData(compressionQuality: 0.9) {
       do {
-        try data.write(to: fileURL, options: .atomicWrite)
+        try data.write(to: fileURL)
         viewModel.saveSeriesCover(url: fileURL)
       } catch {
         return

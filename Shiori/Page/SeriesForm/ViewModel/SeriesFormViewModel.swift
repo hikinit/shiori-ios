@@ -55,7 +55,7 @@ class SeriesFormViewModel {
     viewControllerTitle = series?.title ?? viewControllerTitle
     title = series?.title ?? ""
     kind = series?.kind ?? ""
-    status = series?.status ?? ""
+    status = series?.status?.capitalized ?? ""
     website = series?.website?.absoluteString ?? ""
   }
 

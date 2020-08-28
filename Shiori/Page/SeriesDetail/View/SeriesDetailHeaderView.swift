@@ -61,6 +61,7 @@ class SeriesDetailHeaderView: UIView {
 
     if let coverData = model.cover {
       coverImageView.image = UIImage(data: coverData)
+      backgroundImageView.image = coverImageView.image
     }
   }
   

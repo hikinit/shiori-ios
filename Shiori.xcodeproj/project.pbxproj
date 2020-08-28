@@ -56,6 +56,8 @@
 		2ED51C2C24F8774B002F374F /* SeriesDetailViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED51C2B24F8774B002F374F /* SeriesDetailViewController+TableView.swift */; };
 		2ED51C2E24F87881002F374F /* BookmarkCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED51C2D24F87881002F374F /* BookmarkCellView.swift */; };
 		2ED51C3024F88286002F374F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED51C2F24F88286002F374F /* ImagePicker.swift */; };
+		2ED51C3B24F8AB81002F374F /* SeriesListImageCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ED51C3A24F8AB81002F374F /* SeriesListImageCellView.xib */; };
+		2ED51C3D24F8ABFD002F374F /* SeriesListImageCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED51C3C24F8ABFD002F374F /* SeriesListImageCellView.swift */; };
 		2EF3F2C124F3EAB400E542AC /* UITextField+PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C024F3EAB400E542AC /* UITextField+PickerView.swift */; };
 		2EF3F2C424F46A9F00E542AC /* SeriesFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */; };
 		2EF3F2C524F46AA500E542AC /* SeriesFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */; };
@@ -114,6 +116,8 @@
 		2ED51C2B24F8774B002F374F /* SeriesDetailViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SeriesDetailViewController+TableView.swift"; sourceTree = "<group>"; };
 		2ED51C2D24F87881002F374F /* BookmarkCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCellView.swift; sourceTree = "<group>"; };
 		2ED51C2F24F88286002F374F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		2ED51C3A24F8AB81002F374F /* SeriesListImageCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesListImageCellView.xib; sourceTree = "<group>"; };
+		2ED51C3C24F8ABFD002F374F /* SeriesListImageCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListImageCellView.swift; sourceTree = "<group>"; };
 		2EF3F2C024F3EAB400E542AC /* UITextField+PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+PickerView.swift"; sourceTree = "<group>"; };
 		2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesFormViewModel.swift; sourceTree = "<group>"; };
 		2EF3F2C624F46AE900E542AC /* SeriesFormViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesFormViewModelTests.swift; sourceTree = "<group>"; };
@@ -261,9 +265,9 @@
 		2E92703A24F35CC30099CF86 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2ED51C3924F8AB1E002F374F /* SeriesListImageCell */,
+				2ED51C3824F8AB15002F374F /* SeriesListCell */,
 				2E92703B24F35D080099CF86 /* SeriesListViewController.storyboard */,
-				2E92704224F36AC70099CF86 /* SeriesListCellView.swift */,
-				2E92704424F36C1E0099CF86 /* SeriesListCellView.xib */,
 				2E19E0C824F37F33007BB654 /* SeriesListFlowLayout.swift */,
 			);
 			path = View;
@@ -360,6 +364,24 @@
 				2ED51C2D24F87881002F374F /* BookmarkCellView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2ED51C3824F8AB15002F374F /* SeriesListCell */ = {
+			isa = PBXGroup;
+			children = (
+				2E92704224F36AC70099CF86 /* SeriesListCellView.swift */,
+				2E92704424F36C1E0099CF86 /* SeriesListCellView.xib */,
+			);
+			name = SeriesListCell;
+			sourceTree = "<group>";
+		};
+		2ED51C3924F8AB1E002F374F /* SeriesListImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				2ED51C3A24F8AB81002F374F /* SeriesListImageCellView.xib */,
+				2ED51C3C24F8ABFD002F374F /* SeriesListImageCellView.swift */,
+			);
+			name = SeriesListImageCell;
 			sourceTree = "<group>";
 		};
 		2EF3F2BE24F3EA1F00E542AC /* Extension */ = {
@@ -485,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E92703C24F35D080099CF86 /* SeriesListViewController.storyboard in Resources */,
+				2ED51C3B24F8AB81002F374F /* SeriesListImageCellView.xib in Resources */,
 				2E07F81224F39FA500413389 /* SeriesFormViewController.storyboard in Resources */,
 				2EC6433724F6A78E0020D2E0 /* SeriesDetailHeaderView.xib in Resources */,
 				2E92704524F36C1E0099CF86 /* SeriesListCellView.xib in Resources */,
@@ -558,6 +581,7 @@
 				2E243F6B24F61D5B00A1605C /* AlertBuilder.swift in Sources */,
 				2EF7B61D24F75DBF00D3032F /* SeriesDetailViewModel.swift in Sources */,
 				2E5070E224F154F600E2C840 /* SeriesListViewModel.swift in Sources */,
+				2ED51C3D24F8ABFD002F374F /* SeriesListImageCellView.swift in Sources */,
 				2E92703924F3591E0099CF86 /* SeriesListViewController.swift in Sources */,
 				2E92704324F36AC70099CF86 /* SeriesListCellView.swift in Sources */,
 			);

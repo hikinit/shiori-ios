@@ -14,13 +14,24 @@ extension SeriesListViewController: UICollectionViewDataSource {
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: viewModel.cellId,
-            for: indexPath) as? SeriesListCellView else {
-      fatalError("Can't load \(SeriesListCellView.description())")
+    let cellViewModel = viewModel.cellViewModelsAtIndexPath(indexPath)
+
+    if cellViewModel.cover != nil {
+      let cell = collectionView.dequeueReusableCell(
+        withReuseIdentifier: "SeriesListImageCellView",
+        for: indexPath
+      ) as! SeriesListImageCellView
+
+      cell.configure(with: cellViewModel)
+
+      return cell
     }
 
-    let cellViewModel = viewModel.cellViewModelsAtIndexPath(indexPath)
+    let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: viewModel.cellId,
+            for: indexPath
+    ) as! SeriesListCellView
+
     cell.configure(with: cellViewModel)
 
     return cell

@@ -45,6 +45,7 @@ class SeriesDetailHeaderView: UIView {
     setConstraint()
 
     detailStackView.setCustomSpacing(16, after: titleLabel)
+    coverImageView.layer.cornerRadius = 8
   }
 
 

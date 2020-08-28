@@ -78,6 +78,10 @@ class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
     collectionView.register(
       UINib(nibName: String(describing: SeriesListCellView.self), bundle: nil),
       forCellWithReuseIdentifier: viewModel.cellId)
+    collectionView.register(
+      UINib(nibName: String(describing: SeriesListImageCellView.self), bundle: nil),
+      forCellWithReuseIdentifier: "SeriesListImageCellView")
+
     collectionView.dataSource = self
     collectionView.delegate = self
     collectionView.alwaysBounceVertical = true

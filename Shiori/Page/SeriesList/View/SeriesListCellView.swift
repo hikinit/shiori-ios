@@ -8,7 +8,12 @@
 import UIKit
 
 class SeriesListCellView: UICollectionViewCell {
-  @IBOutlet weak var containerView: UIView!
+  @IBOutlet weak var containerView: UIView! {
+    didSet {
+      containerView.layer.cornerRadius = 8
+    }
+  }
+
   @IBOutlet weak var bookCoverView: UIView! {
     didSet {
       let layer = bookCoverView.layer

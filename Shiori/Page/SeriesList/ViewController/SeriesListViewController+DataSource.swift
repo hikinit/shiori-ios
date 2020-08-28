@@ -10,7 +10,15 @@ import UIKit
 extension SeriesListViewController: UICollectionViewDataSource {
 
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return viewModel.numberOfRows
+    let count = viewModel.numberOfRows
+
+    if count == 0 {
+      collectionView.backgroundView = SeriesListEmptyView(frame: collectionView.bounds)
+    } else {
+      collectionView.backgroundView = nil
+    }
+
+    return count
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

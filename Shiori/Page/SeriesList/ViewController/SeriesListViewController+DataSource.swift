@@ -16,8 +16,8 @@ extension SeriesListViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: viewModel.cellId,
-            for: indexPath) as? SeriesListViewCell else {
-      fatalError("Can't load \(SeriesListViewCell.description())")
+            for: indexPath) as? SeriesListCellView else {
+      fatalError("Can't load \(SeriesListCellView.description())")
     }
 
     let cellViewModel = viewModel.cellViewModelsAtIndexPath(indexPath)

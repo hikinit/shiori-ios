@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SeriesListViewCell: UICollectionViewCell {
+class SeriesListCellView: UICollectionViewCell {
   @IBOutlet weak var containerView: UIView!
   @IBOutlet weak var bookCoverView: UIView! {
     didSet {

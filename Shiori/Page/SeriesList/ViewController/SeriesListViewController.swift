@@ -76,7 +76,7 @@ class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
   // MARK: - CollectionView
   private func setupCollectionView() {
     collectionView.register(
-      UINib(nibName: String(describing: SeriesListViewCell.self), bundle: nil),
+      UINib(nibName: String(describing: SeriesListCellView.self), bundle: nil),
       forCellWithReuseIdentifier: viewModel.cellId)
     collectionView.dataSource = self
     collectionView.delegate = self

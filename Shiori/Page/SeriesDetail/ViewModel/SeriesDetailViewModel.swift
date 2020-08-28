@@ -58,6 +58,12 @@ class SeriesDetailViewModel {
     getBookmarks()
   }
 
+  func saveSeriesCover(url: URL) {
+    series.cover = url
+
+    library.updateSeries(series)
+  }
+
   private func getBookmarks() {
     bookmarks = series.arrayBookmarks
   }

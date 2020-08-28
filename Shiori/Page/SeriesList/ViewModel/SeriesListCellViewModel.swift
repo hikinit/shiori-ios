@@ -31,6 +31,18 @@ class SeriesListCellViewModel {
     series.website
   }
 
+  var cover: Data? {
+    guard let coverURL = series.cover?.lastPathComponent else { return nil }
+    let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    let fileURL = documentsDirectory.appendingPathComponent(coverURL)
+
+    do {
+      return try Data(contentsOf: fileURL)
+    } catch {
+      return nil
+    }
+  }
+
   init(series: Series) {
     self.series = series
   }

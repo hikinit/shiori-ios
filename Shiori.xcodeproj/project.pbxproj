@@ -55,6 +55,7 @@
 		2ED51C2A24F86EE0002F374F /* SeriesDetailViewController+AddBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED51C2924F86EE0002F374F /* SeriesDetailViewController+AddBookmark.swift */; };
 		2ED51C2C24F8774B002F374F /* SeriesDetailViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED51C2B24F8774B002F374F /* SeriesDetailViewController+TableView.swift */; };
 		2ED51C2E24F87881002F374F /* BookmarkCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED51C2D24F87881002F374F /* BookmarkCellView.swift */; };
+		2ED51C3024F88286002F374F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED51C2F24F88286002F374F /* ImagePicker.swift */; };
 		2EF3F2C124F3EAB400E542AC /* UITextField+PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C024F3EAB400E542AC /* UITextField+PickerView.swift */; };
 		2EF3F2C424F46A9F00E542AC /* SeriesFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */; };
 		2EF3F2C524F46AA500E542AC /* SeriesFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */; };
@@ -112,6 +113,7 @@
 		2ED51C2924F86EE0002F374F /* SeriesDetailViewController+AddBookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SeriesDetailViewController+AddBookmark.swift"; sourceTree = "<group>"; };
 		2ED51C2B24F8774B002F374F /* SeriesDetailViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SeriesDetailViewController+TableView.swift"; sourceTree = "<group>"; };
 		2ED51C2D24F87881002F374F /* BookmarkCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCellView.swift; sourceTree = "<group>"; };
+		2ED51C2F24F88286002F374F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		2EF3F2C024F3EAB400E542AC /* UITextField+PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+PickerView.swift"; sourceTree = "<group>"; };
 		2EF3F2C324F46A9F00E542AC /* SeriesFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesFormViewModel.swift; sourceTree = "<group>"; };
 		2EF3F2C624F46AE900E542AC /* SeriesFormViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesFormViewModelTests.swift; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 				2E92703D24F35E250099CF86 /* Protocol */,
 				2E9CDE3724F4C6C2000D76BD /* PickerDataSource.swift */,
 				2E243F6A24F61D5B00A1605C /* AlertBuilder.swift */,
+				2ED51C2F24F88286002F374F /* ImagePicker.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				2EC6433924F6A92F0020D2E0 /* SeriesDetailHeaderView.swift in Sources */,
 				2E5070DB24F0847B00E2C840 /* Library.swift in Sources */,
 				2E0ADD2A24F3DF00007746BB /* SeriesFormViewController.swift in Sources */,
+				2ED51C3024F88286002F374F /* ImagePicker.swift in Sources */,
 				2E19E0C924F37F33007BB654 /* SeriesListFlowLayout.swift in Sources */,
 				2E92704124F364F60099CF86 /* SeriesListViewController+DataSource.swift in Sources */,
 				2E243F6B24F61D5B00A1605C /* AlertBuilder.swift in Sources */,

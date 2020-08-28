@@ -20,6 +20,7 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
   var series: Series!
   var viewModel: SeriesDetailViewModel!
   var kindPickerDataSource: PickerDataSource!
+  var imagePicker: ImagePicker!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -37,10 +38,14 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
     tableView.register(BookmarkCellView.self, forCellReuseIdentifier: viewModel.cellId)
 
     navigationItem.largeTitleDisplayMode = .never
+    addCoverImageGesture()
+
+    imagePicker = ImagePicker(presentationController: self, delegate: self)
   }
 
   override func viewWillAppear(_ animated: Bool) {
     viewModel.reloadDataSource()
+
     fillUI()
   }
 
@@ -64,6 +69,16 @@ class SeriesDetailViewController: UITableViewController, ViewControllerWithStory
     present(deleteAlert, animated: true)
   }
 
+  private func addCoverImageGesture() {
+    let gesture = UITapGestureRecognizer(target: self, action: #selector(imageDidTap))
+    headerView.coverImageView.isUserInteractionEnabled = true
+    headerView.coverImageView.addGestureRecognizer(gesture)
+  }
+
+  @objc private func imageDidTap() {
+    imagePicker.present()
+  }
+
   // MARK: - View Model
   func setupViewModel() {
     viewModel = SeriesDetailViewModel(library: Library.shared, series: series)
@@ -82,6 +97,26 @@ extension SeriesDetailViewController {
       vc.series = viewModel.series
     default:
       break
+    }
+  }
+}
+
+extension SeriesDetailViewController: ImagePickerDelegate {
+  func didSelect(image: UIImage?) {
+    guard let image = image else { return }
+    headerView.coverImageView.image = image
+
+    let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    let id = viewModel.series.id!.uuidString
+    let fileURL = documentsDirectory.appendingPathComponent("\(id).jpg")
+
+    if let data = image.jpegData(compressionQuality: 0.9) {
+      do {
+        try data.write(to: fileURL, options: .atomicWrite)
+        viewModel.saveSeriesCover(url: fileURL)
+      } catch {
+        return
+      }
     }
   }
 }

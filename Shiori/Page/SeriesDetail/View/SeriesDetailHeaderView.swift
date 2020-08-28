@@ -58,7 +58,12 @@ class SeriesDetailHeaderView: UIView {
       websiteButton.isHidden = false
       websiteURL = model.websiteURL
     }
+
+    if let coverData = model.cover {
+      coverImageView.image = UIImage(data: coverData)
+    }
   }
+  
 
   private func goToWebsite() {
     guard let url = websiteURL,

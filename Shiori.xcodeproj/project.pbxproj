@@ -23,6 +23,8 @@
 		2E339E2F24EFB484003EB34C /* Series+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92B68E24EE752000187C4E /* Series+CoreDataClass.swift */; };
 		2E3C600D24F8EA9300BDAF0C /* SeriesListEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3C600C24F8EA9300BDAF0C /* SeriesListEmptyView.xib */; };
 		2E3C601024F8ED8700BDAF0C /* SeriesListEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C600F24F8ED8700BDAF0C /* SeriesListEmptyView.swift */; };
+		2E3C601424F8F06200BDAF0C /* BookmarkEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3C601324F8F06200BDAF0C /* BookmarkEmptyView.xib */; };
+		2E3C601624F8F12B00BDAF0C /* BookmarkEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C601524F8F12B00BDAF0C /* BookmarkEmptyView.swift */; };
 		2E5070D924F0846E00E2C840 /* LibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5070D824F0846E00E2C840 /* LibraryTests.swift */; };
 		2E5070DB24F0847B00E2C840 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5070DA24F0847B00E2C840 /* Library.swift */; };
 		2E5070DC24F0847F00E2C840 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5070DA24F0847B00E2C840 /* Library.swift */; };
@@ -86,6 +88,8 @@
 		2E339E2424EFB182003EB34C /* Bookmark+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bookmark+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2E3C600C24F8EA9300BDAF0C /* SeriesListEmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesListEmptyView.xib; sourceTree = "<group>"; };
 		2E3C600F24F8ED8700BDAF0C /* SeriesListEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListEmptyView.swift; sourceTree = "<group>"; };
+		2E3C601324F8F06200BDAF0C /* BookmarkEmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkEmptyView.xib; sourceTree = "<group>"; };
+		2E3C601524F8F12B00BDAF0C /* BookmarkEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkEmptyView.swift; sourceTree = "<group>"; };
 		2E5070D824F0846E00E2C840 /* LibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTests.swift; sourceTree = "<group>"; };
 		2E5070DA24F0847B00E2C840 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		2E5070E124F154F600E2C840 /* SeriesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesListViewModel.swift; sourceTree = "<group>"; };
@@ -201,6 +205,24 @@
 				2E3C600F24F8ED8700BDAF0C /* SeriesListEmptyView.swift */,
 			);
 			name = SeriesListEmpty;
+			sourceTree = "<group>";
+		};
+		2E3C601124F8F03700BDAF0C /* SeriesDetailHeader */ = {
+			isa = PBXGroup;
+			children = (
+				2EC6433624F6A78E0020D2E0 /* SeriesDetailHeaderView.xib */,
+				2EC6433824F6A92F0020D2E0 /* SeriesDetailHeaderView.swift */,
+			);
+			name = SeriesDetailHeader;
+			sourceTree = "<group>";
+		};
+		2E3C601224F8F04700BDAF0C /* BookmarkEmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				2E3C601324F8F06200BDAF0C /* BookmarkEmptyView.xib */,
+				2E3C601524F8F12B00BDAF0C /* BookmarkEmptyView.swift */,
+			);
+			name = BookmarkEmptyView;
 			sourceTree = "<group>";
 		};
 		2E5070DE24F1547C00E2C840 /* Page */ = {
@@ -372,9 +394,9 @@
 		2EC6433324F648470020D2E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2E3C601224F8F04700BDAF0C /* BookmarkEmptyView */,
+				2E3C601124F8F03700BDAF0C /* SeriesDetailHeader */,
 				2EC6433424F6485B0020D2E0 /* SeriesDetailViewController.storyboard */,
-				2EC6433624F6A78E0020D2E0 /* SeriesDetailHeaderView.xib */,
-				2EC6433824F6A92F0020D2E0 /* SeriesDetailHeaderView.swift */,
 				2ED51C2D24F87881002F374F /* BookmarkCellView.swift */,
 			);
 			path = View;
@@ -526,6 +548,7 @@
 				2E07F81224F39FA500413389 /* SeriesFormViewController.storyboard in Resources */,
 				2EC6433724F6A78E0020D2E0 /* SeriesDetailHeaderView.xib in Resources */,
 				2E92704524F36C1E0099CF86 /* SeriesListCellView.xib in Resources */,
+				2E3C601424F8F06200BDAF0C /* BookmarkEmptyView.xib in Resources */,
 				2EC6433524F6485B0020D2E0 /* SeriesDetailViewController.storyboard in Resources */,
 				2E92B68124EE746000187C4E /* LaunchScreen.storyboard in Resources */,
 				2E92B67E24EE746000187C4E /* Assets.xcassets in Resources */,
@@ -571,6 +594,7 @@
 				2EF7B62024F7657000D3032F /* BookmarkCellViewModel.swift in Sources */,
 				2E92B69024EE752000187C4E /* Series+CoreDataClass.swift in Sources */,
 				2EF3F2C124F3EAB400E542AC /* UITextField+PickerView.swift in Sources */,
+				2E3C601624F8F12B00BDAF0C /* BookmarkEmptyView.swift in Sources */,
 				2ED51C2C24F8774B002F374F /* SeriesDetailViewController+TableView.swift in Sources */,
 				2E58B62124F210C300C168D2 /* SeriesListCellViewModel.swift in Sources */,
 				2E92703624F354440099CF86 /* TabBarController.swift in Sources */,

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17147" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17120"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookmarkEmptyView" customModule="Shiori" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="JSD-I3-Mi0" id="m8W-t9-5xV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSD-I3-Mi0" userLabel="Container View">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMPTY BOOKMARK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsR-bL-hq5">
+                    <rect key="frame" x="120.5" y="139.5" width="159" height="21"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please tap &quot;+&quot; to add a Bookmark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IpU-yH-bxx">
+                    <rect key="frame" x="84" y="161.5" width="232" height="18"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="U0W-wa-TFg"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="IpU-yH-bxx" firstAttribute="centerX" secondItem="zsR-bL-hq5" secondAttribute="centerX" id="X7W-Vu-BDK"/>
+                <constraint firstItem="zsR-bL-hq5" firstAttribute="centerX" secondItem="JSD-I3-Mi0" secondAttribute="centerX" id="YM5-D1-StM"/>
+                <constraint firstItem="zsR-bL-hq5" firstAttribute="centerY" secondItem="JSD-I3-Mi0" secondAttribute="centerY" id="hrS-Jh-glK"/>
+                <constraint firstItem="IpU-yH-bxx" firstAttribute="firstBaseline" secondItem="zsR-bL-hq5" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="koS-rw-5LC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="14.492753623188406" y="-182.14285714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

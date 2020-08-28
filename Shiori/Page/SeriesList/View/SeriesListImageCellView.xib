@@ -15,7 +15,7 @@
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9PD-XV-zPk">
                 <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Grd-sl-5s2">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Grd-sl-5s2">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                     </imageView>
                 </subviews>
@@ -27,10 +27,10 @@
                 </constraints>
             </collectionViewCellContentView>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="9PD-XV-zPk" secondAttribute="bottom" id="Drp-pD-ljV"/>
-                <constraint firstItem="9PD-XV-zPk" firstAttribute="top" secondItem="hDj-zA-2re" secondAttribute="top" id="EGd-oT-ke8"/>
-                <constraint firstItem="9PD-XV-zPk" firstAttribute="leading" secondItem="hDj-zA-2re" secondAttribute="leading" id="Qaw-bt-9RD"/>
-                <constraint firstAttribute="trailing" secondItem="9PD-XV-zPk" secondAttribute="trailing" id="Vq6-Xr-0UR"/>
+                <constraint firstItem="9PD-XV-zPk" firstAttribute="leading" secondItem="hDj-zA-2re" secondAttribute="leading" id="CVC-36-kxt"/>
+                <constraint firstAttribute="bottom" secondItem="9PD-XV-zPk" secondAttribute="bottom" id="Ca2-yj-P8Q"/>
+                <constraint firstAttribute="trailing" secondItem="9PD-XV-zPk" secondAttribute="trailing" id="Erl-O0-1nW"/>
+                <constraint firstItem="9PD-XV-zPk" firstAttribute="top" secondItem="hDj-zA-2re" secondAttribute="top" id="W0K-XF-Ygz"/>
             </constraints>
             <connections>
                 <outlet property="coverImageView" destination="Grd-sl-5s2" id="2nX-tP-mXy"/>

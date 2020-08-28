@@ -105,6 +105,7 @@ extension SeriesDetailViewController: ImagePickerDelegate {
   func didSelect(image: UIImage?) {
     guard let image = image else { return }
     headerView.coverImageView.image = image
+    headerView.backgroundImageView.image = image
 
     let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     let id = viewModel.series.id!.uuidString

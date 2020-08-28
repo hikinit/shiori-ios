@@ -39,7 +39,6 @@ class BookmarkCellViewModel {
     formatter.numberStyle = .decimal
     formatter.decimalSeparator = "."
     formatter.minimumFractionDigits = 0
-    formatter.maximumIntegerDigits = 1
 
     return formatter.string(from: NSNumber(value: number))!
   }

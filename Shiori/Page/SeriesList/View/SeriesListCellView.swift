@@ -30,4 +30,12 @@ class SeriesListCellView: UICollectionViewCell {
     titleLabel.text = viewModel.title
     kindLabel.text = viewModel.kind
   }
+
+  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    if #available(iOS 13.0, *) {
+      if (traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection)) {
+        bookCoverView.layer.borderColor = UIColor.systemBackground.cgColor
+      }
+    }
+  }
 }

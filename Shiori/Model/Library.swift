@@ -43,6 +43,13 @@ extension Library {
     return seriesManager.getAll(sorts: [sortByTitle])
   }
 
+  func searchSeries(_ title: String) -> [Series] {
+    let sortByTitle = NSSortDescriptor(key: "title", ascending: true)
+    let predicate = NSPredicate(format: "title CONTAINS[c] %@", title)
+
+    return seriesManager.getAll(predicate: predicate, sorts: [sortByTitle])
+  }
+
   func deleteSeries(_ series: Series) -> Bool {
     return seriesManager.delete(series)
   }

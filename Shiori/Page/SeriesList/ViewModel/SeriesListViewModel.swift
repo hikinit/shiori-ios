@@ -21,7 +21,6 @@ class SeriesListViewModel {
     }
   }
 
-
   init(library: Library) {
     self.library = library
 
@@ -39,6 +38,12 @@ class SeriesListViewModel {
   func reloadDataSource(completion: @escaping () -> () = {}) {
     getAllSeries()
     completion()
+  }
+
+  func searchSeries(_ title: String) {
+    allSeries = title.count > 0 ?
+      library.searchSeries(title) :
+      library.getAllSeries()
   }
 
   private func getAllSeries() {

@@ -19,9 +19,11 @@ class EntityManager<Entity: NSManagedObject> {
 }
 
 extension EntityManager {
-  func getAll(sorts: [NSSortDescriptor]? = nil) -> [Entity] {
+  func getAll(predicate: NSPredicate? = nil, sorts: [NSSortDescriptor]? = nil) -> [Entity] {
     let request = NSFetchRequest<Entity>(entityName: String(describing: Entity.self))
+
     request.sortDescriptors = sorts
+    request.predicate = predicate
 
     do {
       return try context.fetch(request)

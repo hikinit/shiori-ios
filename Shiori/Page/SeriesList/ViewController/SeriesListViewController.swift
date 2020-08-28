@@ -18,6 +18,7 @@ class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
     setupViewModel()
     setupCollectionView()
     setupLongPress()
+    setupSearchController()
 
     viewModel.viewDidLoad()
   }
@@ -91,12 +92,29 @@ class SeriesListViewController: UIViewController, ViewControllerWithStoryboard {
     }
   }
 
+  // MARK: - Searchbar
+  private func setupSearchController() {
+    let search = UISearchController(searchResultsController: nil)
+    search.searchResultsUpdater = self
+    search.obscuresBackgroundDuringPresentation = false
+    search.searchBar.placeholder = "Search..."
+    navigationItem.searchController = search
+  }
+
   // MARK: - View Model
   private func setupViewModel() {
     viewModel = SeriesListViewModel(library: Library.shared)
   }
 
   var viewModel: SeriesListViewModel!
+}
+
+extension SeriesListViewController: UISearchResultsUpdating {
+  func updateSearchResults(for searchController: UISearchController) {
+    guard let text = searchController.searchBar.text else { return }
+    viewModel.searchSeries(text)
+    collectionView.reloadData()
+  }
 }
 
 // MARK: - Segue

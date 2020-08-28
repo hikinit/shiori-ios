@@ -23,4 +23,15 @@ extension SeriesDetailViewController {
 
     return cell
   }
+
+  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    switch editingStyle {
+    case .delete:
+      viewModel.deleteBookmarkAtIndexPath(indexPath) { _ in
+        tableView.reloadData()
+      }
+    default:
+      break
+    }
+  }
 }

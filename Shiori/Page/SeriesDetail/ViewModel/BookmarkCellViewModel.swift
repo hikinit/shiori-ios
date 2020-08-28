@@ -8,7 +8,7 @@
 import Foundation
 
 class BookmarkCellViewModel {
-  private var bookmark: Bookmark
+  var bookmark: Bookmark
 
   var name: String {
     bookmark.name!

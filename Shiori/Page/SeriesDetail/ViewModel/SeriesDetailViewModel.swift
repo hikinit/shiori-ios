@@ -48,6 +48,14 @@ class SeriesDetailViewModel {
     completion(deleted)
   }
 
+  func deleteBookmarkAtIndexPath(_ indexPath: IndexPath, completion: @escaping (Bool) -> () = {_ in}) {
+    let bookmark = cellViewModelAtIndexPath(indexPath).bookmark
+    let deleted = library.deleteBookmark(bookmark)
+
+    getBookmarks()
+    completion(deleted)
+  }
+
   func addNewBookmark(kind: String, number: Float) {
     library.addBookmark(
       number: number,
